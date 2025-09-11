@@ -7,7 +7,7 @@ A simple desktop application for Windows that helps students and faculty at Cali
 
 
 
-## Features
+**Features:**
 
 *   **Find Empty Classrooms:** Select a day, a time slot, and an optional building to get a list of all physically available classrooms.
 *   **Check Specific Rooms:** Verify the schedule for a single classroom to see if it's occupied during a specific time, and if so, by which class and instructor.
