@@ -1,0 +1,16 @@
+# Database file
+schedule.db
+
+# Python bytecode and cache
+__pycache__/
+*.pyc
+
+# Distribution / packaging folders (for Phase 6)
+dist/
+build/
+*.egg-info/
+
+# Virtual environment folders (common names)
+venv/
+env/
+.env
