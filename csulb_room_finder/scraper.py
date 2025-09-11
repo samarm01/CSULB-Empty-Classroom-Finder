@@ -2,8 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import time
+import json
+from datetime import datetime # --- THIS IS THE FIX ---
 
-# --- Configuration & Helper functions (Unchanged) ---
+# --- Configuration & All Helper functions (_parse_..., fetch..., extract..., scrape...) are UNCHANGED ---
 SEMESTER = "Fall"
 YEAR = "2025"
 BASE_SCHEDULE_URL = f"https://web.csulb.edu/depts/enrollment/registration/class_schedule/{SEMESTER}_{YEAR}/By_Subject/"
@@ -75,52 +77,42 @@ def scrape_subject_page(subject_url):
                 if building and room and start_time is not None:
                     class_schedules.append({"course_title": full_title, "days": days, "start_time": start_time, "end_time": end_time, "building": building, "room": room, "instructor": instructor_text})
     return class_schedules
-
-# --- MODIFIED MASTER FUNCTION ---
-def get_all_class_schedules(progress_queue=None):
-    """
-    Orchestrates the scraping process, printing progress to the console
-    and optionally reporting to a queue for the GUI.
-    """
-    # Helper function to handle both printing and queuing
-    def report(msg):
-        print(msg) # Always print to the console
-        if progress_queue:
-            progress_queue.put(msg)
-
-    report("--- Starting Full Scrape Process ---")
+def get_all_class_schedules():
+    print("--- Starting Full Scrape Process ---")
     main_html = fetch_main_page_content()
     if not main_html:
-        report("Error: Could not fetch the main page. Halting.")
+        print("Error: Could not fetch the main page. Halting.")
         return []
-    
     subject_links = extract_subject_links(main_html)
     if not subject_links:
-        report("Error: Could not find any subject links. Halting.")
+        print("Error: Could not find any subject links. Halting.")
         return []
-    
     total_subjects = len(subject_links)
-    report(f"Found {total_subjects} subjects to scrape.")
-    
+    print(f"Found {total_subjects} subjects to scrape.")
     all_classes = []
     for i, link in enumerate(subject_links):
         filename = link.split('/')[-1]
-        report(f"({i+1}/{total_subjects}) Scraping: {filename}")
+        print(f"({i+1}/{total_subjects}) Scraping: {filename}")
         schedules = scrape_subject_page(link)
         all_classes.extend(schedules)
         time.sleep(0.05)
-        
-    report(f"\n--- Full Scrape Complete ---")
-    final_count = len(all_classes)
-    report(f"Total physical class sessions found: {final_count}")
-    
-    # Send a final, clean message to the UI if a queue is present
-    if progress_queue:
-        progress_queue.put(f"Scrape complete. Found {final_count} class sessions.")
-        
+    print(f"\n--- Full Scrape Complete ---\nTotal physical class sessions found: {len(all_classes)}")
     return all_classes
 
-# --- Testing Block ---
+def save_data_to_json(class_list, filename="schedule.json"):
+    buildings = sorted(list(set(c['building'] for c in class_list)))
+    
+    final_data = {
+        "last_updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        "buildings": buildings,
+        "classes": class_list
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(final_data, f, indent=2)
+    print(f"Successfully saved all data to {filename}")
+
 if __name__ == "__main__":
-    # This will now run the scraper and print all progress to your terminal
-    get_all_class_schedules()
+    all_class_data = get_all_class_schedules()
+    if all_class_data:
+        save_data_to_json(all_class_data)

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSULB Room Finder</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background-color: #f4f4f9; }
+        h1, h2 { color: #333; }
+        #app-container { background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        form { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
+        
+        /* --- MODIFIED: Fix for layout issue --- */
+        form h2, form p {
+            grid-column: 1 / -1; /* Make this element span all columns */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        form p {
+            color: #555;
+            margin-top: -5px; /* Pull the paragraph closer to the heading */
+        }
+        /* ------------------------------------ */
+
+        label { text-align: right; }
+        input, select, button { padding: 10px; width: 100%; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px; font-size: 1em; }
+        button { grid-column: 1 / -1; background-color: #005A9C; color: white; border: none; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #004a80; }
+        #last-updated { text-align: center; color: #666; font-size: 0.9em; margin-bottom: 20px; }
+        #results-list ul { list-style-type: none; padding: 0; }
+        #results-list li { background-color: #e9ecef; padding: 10px; margin-bottom: 5px; border-radius: 4px; }
+        .schedule-item { border-left: 3px solid #005A9C; padding-left: 15px; margin-bottom: 15px; }
+        .schedule-item p { margin: 4px 0; }
+        .schedule-item .course-title { font-weight: bold; }
+        #copy-button { background-color: #6c757d; margin-top: 10px; margin-bottom: 15px; display: none; /* Hidden by default */ }
+        #disclaimer { font-size: 10px; color: #666; text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <h1>CSULB Empty Classroom Finder</h1>
+        <p id="last-updated">Loading data...</p>
+
+        <!-- Form 1: Find Empty Rooms -->
+        <form id="find-empty-form">
+            <h2>Find an Empty Room</h2>
+            <label for="day">Day:</label>
+            <select id="day" name="day">
+                <option value="M">Monday</option><option value="Tu">Tuesday</option><option value="W">Wednesday</option>
+                <option value="Th">Thursday</option><option value="F">Friday</option><option value="Sa">Saturday</option>
+            </select>
+            <label for="start_time">Start Time (e.g., 900):</label>
+            <input type="text" id="start_time" name="start_time" required>
+            <label for="end_time">End Time (e.g., 1030):</label>
+            <input type="text" id="end_time" name="end_time" required>
+            <label for="building">Building (Optional):</label>
+            <select id="building" name="building"><option>All Buildings</option></select>
+            <button type="submit">Find Available Rooms</button>
+        </form>
+
+        <!-- Form 2: Check a Specific Room -->
+        <form id="check-room-form">
+             <h2>Check a Specific Room</h2>
+            <p>(Uses the day and time from the form above)</p>
+            <label for="classroom">Classroom (e.g., CBA-123):</label>
+            <input type="text" id="classroom" name="classroom" required>
+            <button type="submit">Check Availability</button>
+        </form>
+
+        <div id="results-container">
+            <h2 id="results-header">Results</h2>
+            <!-- --- MODIFIED: Copy button moved here --- -->
+            <button id="copy-button">Copy Results to Clipboard</button>
+            <div id="results-list"><p>Please enter a time and search.</p></div>
+        </div>
+
+        <p id="disclaimer">This app is based on the official CSULB Fall 2025 schedule of classes made by administration. Do not completely rely on it as it cannot predict club activities, other students, guest speakers, on-campus events, etc. Use at your own discretion. Created by Matthew Samar on 9/11/25. Check out the github https://github.com/samarm01/CSULB-Empty-Classroom-Finder</p>
+    </div>
+
+    <script>
+        // --- The JavaScript section is unchanged and remains the same ---
+        let allClassData = [];
+        let allBuildings = [];
+
+        window.onload = async () => {
+            try {
+                const response = await fetch('schedule.json');
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                allClassData = data.classes;
+                allBuildings = data.buildings;
+
+                const buildingDropdown = document.getElementById('building');
+                allBuildings.forEach(b => {
+                    const option = document.createElement('option');
+                    option.value = b; option.textContent = b;
+                    buildingDropdown.appendChild(option);
+                });
+                document.getElementById('last-updated').textContent = `Data last updated: ${data.last_updated}`;
+            } catch (error) {
+                document.getElementById('last-updated').textContent = 'Error loading schedule data.';
+                console.error('Failed to load schedule.json:', error);
+            }
+        };
+
+        const resultsList = document.getElementById('results-list');
+        const resultsHeader = document.getElementById('results-header');
+        const copyButton = document.getElementById('copy-button');
+
+        document.getElementById('find-empty-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const day = document.getElementById('day').value;
+            const startTime = parseInt(document.getElementById('start_time').value);
+            const endTime = parseInt(document.getElementById('end_time').value);
+            const buildingFilter = document.getElementById('building').value;
+
+            if (isNaN(startTime) || isNaN(endTime) || startTime >= endTime) {
+                resultsList.innerHTML = '<p style="color: red;">Please enter a valid time range.</p>'; return;
+            }
+
+            const buildingSet = new Set();
+            const occupiedRooms = new Set();
+            for (const cls of allClassData) {
+                if (buildingFilter === 'All Buildings' || cls.building === buildingFilter) {
+                    buildingSet.add(`${cls.building}-${cls.room}`);
+                }
+                if (cls.days.includes(day) && cls.start_time < endTime && cls.end_time > startTime) {
+                    if (buildingFilter === 'All Buildings' || cls.building === buildingFilter) {
+                        occupiedRooms.add(`${cls.building}-${cls.room}`);
+                    }
+                }
+            }
+
+            const emptyRooms = [...buildingSet].filter(room => !occupiedRooms.has(room)).sort();
+            resultsHeader.textContent = `Results (${emptyRooms.length} empty rooms found)`;
+            displayResults(emptyRooms);
+        });
+
+        document.getElementById('check-room-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const day = document.getElementById('day').value;
+            const startTime = parseInt(document.getElementById('start_time').value);
+            const endTime = parseInt(document.getElementById('end_time').value);
+            const classroom = document.getElementById('classroom').value.toUpperCase().trim();
+
+            if (isNaN(startTime) || isNaN(endTime) || startTime >= endTime) {
+                resultsList.innerHTML = '<p style="color: red;">Please enter a valid time range.</p>'; return;
+            }
+            if (!classroom || !classroom.includes('-')) {
+                resultsList.innerHTML = '<p style="color: red;">Please enter a valid classroom format (e.g., CBA-123).</p>'; return;
+            }
+
+            const schedule = allClassData.filter(cls => 
+                `${cls.building}-${cls.room}` === classroom &&
+                cls.days.includes(day) &&
+                cls.start_time < endTime && 
+                cls.end_time > startTime
+            );
+
+            resultsHeader.textContent = `Schedule for ${classroom}`;
+            displaySchedule(schedule, classroom);
+        });
+
+        function displayResults(rooms) {
+            resultsList.innerHTML = '';
+            copyButton.style.display = 'none';
+            if (rooms.length === 0) {
+                resultsList.innerHTML = '<p>No empty rooms found for this time slot.</p>';
+            } else {
+                const ul = document.createElement('ul');
+                rooms.forEach(room => {
+                    const li = document.createElement('li');
+                    li.textContent = room;
+                    ul.appendChild(li);
+                });
+                resultsList.appendChild(ul);
+                copyButton.style.display = 'block';
+            }
+        }
+
+        function displaySchedule(schedule, classroom) {
+            resultsList.innerHTML = '';
+            copyButton.style.display = 'none';
+            if (schedule.length === 0) {
+                resultsList.innerHTML = `<p>${classroom} is AVAILABLE during this time.</p>`;
+            } else {
+                resultsList.innerHTML = `<h3>${classroom} is OCCUPIED by:</h3>`;
+                schedule.forEach(s => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'schedule-item';
+                    itemDiv.innerHTML = `
+                        <p class="course-title">${s.course_title}</p>
+                        <p><strong>Instructor:</strong> ${s.instructor}</p>
+                        <p><strong>Time:</strong> ${s.start_time} - ${s.end_time}</p>
+                    `;
+                    resultsList.appendChild(itemDiv);
+                });
+            }
+        }
+
+        copyButton.addEventListener('click', () => {
+            const textToCopy = resultsList.innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = copyButton.textContent;
+                copyButton.textContent = 'Copied!';
+                setTimeout(() => { copyButton.textContent = originalText; }, 2000);
+            }).catch(err => console.error('Failed to copy: ', err));
+        });
+    </script>
+</body>
+</html>
