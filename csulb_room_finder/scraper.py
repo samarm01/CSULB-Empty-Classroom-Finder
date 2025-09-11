@@ -52,7 +52,6 @@ def extract_subject_links(html_content):
             subject_links.append(f"{BASE_SCHEDULE_URL}{href}")
     return subject_links
 def scrape_subject_page(subject_url):
-    # This function is now simplified as it doesn't print anything
     try:
         response = requests.get(subject_url, timeout=10)
         response.raise_for_status()
@@ -80,35 +79,48 @@ def scrape_subject_page(subject_url):
 # --- MODIFIED MASTER FUNCTION ---
 def get_all_class_schedules(progress_queue=None):
     """
-    Orchestrates the scraping process, reporting progress to a queue.
+    Orchestrates the scraping process, printing progress to the console
+    and optionally reporting to a queue for the GUI.
     """
+    # Helper function to handle both printing and queuing
     def report(msg):
+        print(msg) # Always print to the console
         if progress_queue:
             progress_queue.put(msg)
 
-    report("Starting scrape...")
+    report("--- Starting Full Scrape Process ---")
     main_html = fetch_main_page_content()
     if not main_html:
-        report("Error: Could not fetch the main page.")
+        report("Error: Could not fetch the main page. Halting.")
         return []
     
     subject_links = extract_subject_links(main_html)
     if not subject_links:
-        report("Error: Could not find any subject links.")
+        report("Error: Could not find any subject links. Halting.")
         return []
     
     total_subjects = len(subject_links)
-    report(f"Found {total_subjects} subjects to scrape...")
+    report(f"Found {total_subjects} subjects to scrape.")
     
     all_classes = []
     for i, link in enumerate(subject_links):
         filename = link.split('/')[-1]
-        report(f"({i+1}/{total_subjects}) Scraping: {filename}...")
+        report(f"({i+1}/{total_subjects}) Scraping: {filename}")
         schedules = scrape_subject_page(link)
         all_classes.extend(schedules)
-        time.sleep(0.05) # A small, polite delay
+        time.sleep(0.05)
         
-    report(f"Scrape complete. Found {len(all_classes)} class sessions.")
+    report(f"\n--- Full Scrape Complete ---")
+    final_count = len(all_classes)
+    report(f"Total physical class sessions found: {final_count}")
+    
+    # Send a final, clean message to the UI if a queue is present
+    if progress_queue:
+        progress_queue.put(f"Scrape complete. Found {final_count} class sessions.")
+        
     return all_classes
 
-# The if __name__ == "__main__" block is removed as it's no longer needed for primary testing.
+# --- Testing Block ---
+if __name__ == "__main__":
+    # This will now run the scraper and print all progress to your terminal
+    get_all_class_schedules()
