@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSULB Room Finder</title>
+    <!-- Simple styling for a cleaner look -->
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+        form { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; align-items: center; }
+        input, select, button { padding: 8px; width: 100%; box-sizing: border-box; }
+        button { grid-column: 1 / -1; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        #results-container { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>CSULB Room Finder</h1>
+
+    <form id="search-form">
+        <label for="day">Day:</label>
+        <select id="day" name="day">
+            <option value="M">Monday</option>
+            <option value="Tu">Tuesday</option>
+            <option value="W">Wednesday</option>
+            <option value="Th">Thursday</option>
+            <option value="F">Friday</option>
+            <option value="Sa">Saturday</option>
+            <option value="Su">Sunday</option>
+        </select>
+
+        <label for="start_time">Start Time (e.g., 900):</label>
+        <input type="text" id="start_time" name="start_time" required>
+
+        <label for="end_time">End Time (e.g., 1030):</label>
+        <input type="text" id="end_time" name="end_time" required>
+
+        <!-- The building dropdown will be populated by JavaScript later -->
+        <label for="building">Building (Optional):</label>
+        <select id="building" name="building">
+            <option>All Buildings</option>
+        </select>
+
+        <button type="submit">Find Available Rooms</button>
+    </form>
+
+    <div id="results-container">
+        <h2>Results</h2>
+        <div id="results-list">
+            <p>Please enter a time and search.</p>
+        </div>
+    </div>
+
+    <script>
+        // Get the form and results elements from the page
+        const form = document.getElementById('search-form');
+        const resultsList = document.getElementById('results-list');
+
+        // Listen for the form to be submitted
+        form.addEventListener('submit', async function(event) {
+            // Prevent the default form submission (which reloads the page)
+            event.preventDefault();
+
+            // Get the values from the form inputs
+            const day = document.getElementById('day').value;
+            const startTime = document.getElementById('start_time').value;
+            const endTime = document.getElementById('end_time').value;
+            const building = document.getElementById('building').value;
+
+            // Show a loading message
+            resultsList.innerHTML = '<p>Searching...</p>';
+
+            try {
+                // Build the API URL with the form data
+                const apiUrl = `/api/search?day=${day}&start_time=${startTime}&end_time=${endTime}&building=${building}`;
+                
+                // Use fetch to make a request to our Flask backend
+                const response = await fetch(apiUrl);
+                const emptyRooms = await response.json();
+
+                // Clear the previous results
+                resultsList.innerHTML = '';
+
+                if (emptyRooms.error) {
+                    resultsList.innerHTML = `<p style="color: red;">Error: ${emptyRooms.error}</p>`;
+                } else if (emptyRooms.length === 0) {
+                    resultsList.innerHTML = '<p>No empty rooms found for this time slot.</p>';
+                } else {
+                    // If we got results, create a list and display them
+                    const ul = document.createElement('ul');
+                    emptyRooms.forEach(room => {
+                        const li = document.createElement('li');
+                        li.textContent = room;
+                        ul.appendChild(li);
+                    });
+                    resultsList.appendChild(ul);
+                }
+            } catch (error) {
+                resultsList.innerHTML = `<p style="color: red;">A network error occurred. Please try again.</p>`;
+            }
+        });
+    </script>
+</body>
+</html>
