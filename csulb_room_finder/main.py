@@ -117,7 +117,7 @@ class RoomFinderApp:
             if self.scraping_in_progress: self.root.after(100, self.check_progress_queue)
 
     def handle_update(self):
-        all_classes = scraper.get_all_class_schedules(progress_queue=self.progress_queue)
+        all_classes = scraper.get_all_class_schedules()
         # --- MODIFIED: Pass class count to on_update_complete ---
         if all_classes:
             database.save_classes_to_db(all_classes)
