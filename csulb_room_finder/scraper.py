@@ -6,8 +6,8 @@ import json
 from datetime import datetime # --- THIS IS THE FIX ---
 
 # --- Configuration & All Helper functions (_parse_..., fetch..., extract..., scrape...) are UNCHANGED ---
-SEMESTER = "Fall"
-YEAR = "2025"
+SEMESTER = "Spring"
+YEAR = "2026"
 BASE_SCHEDULE_URL = f"https://web.csulb.edu/depts/enrollment/registration/class_schedule/{SEMESTER}_{YEAR}/By_Subject/"
 def _parse_days(day_str): return re.findall('M|Tu|W|Th|F|Sa|Su', day_str)
 def _parse_time(time_str):
