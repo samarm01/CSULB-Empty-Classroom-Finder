@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-21 15:09:13",
+  "last_updated": "2026-01-26 14:41:11",
   "buildings": [
     "AS",
     "CINE",
@@ -506,8 +506,8 @@
       ],
       "start_time": 800,
       "end_time": 950,
-      "building": "SPA",
-      "room": "203",
+      "building": "COB",
+      "room": "237B",
       "instructor": "Smith Jones L"
     },
     {
@@ -1504,17 +1504,6 @@
       "instructor": "Peters L"
     },
     {
-      "course_title": "AIS 454 - CONTEMPORARY INDIGENOUS ARTS",
-      "days": [
-        "F"
-      ],
-      "start_time": 900,
-      "end_time": 1145,
-      "building": "FA4",
-      "room": "311",
-      "instructor": "West M"
-    },
-    {
       "course_title": "AIS 485 - AMERICAN INDIANS AND THE LAW",
       "days": [
         "Tu"
@@ -1794,7 +1783,7 @@
       "start_time": 1530,
       "end_time": 1645,
       "building": "LA5",
-      "room": "148",
+      "room": "248",
       "instructor": "Sharifi A"
     },
     {
@@ -2001,8 +1990,8 @@
       ],
       "start_time": 1000,
       "end_time": 1150,
-      "building": "AS",
-      "room": "241",
+      "building": "PSY",
+      "room": "324",
       "instructor": "Hashem I"
     },
     {
@@ -6551,28 +6540,6 @@
       "instructor": "Pincus R"
     },
     {
-      "course_title": "AH 454 - CONTEMPORARY INDIGENOUS ARTS",
-      "days": [
-        "F"
-      ],
-      "start_time": 900,
-      "end_time": 1145,
-      "building": "FA4",
-      "room": "311",
-      "instructor": "West M"
-    },
-    {
-      "course_title": "AH 455 - TRADITIONAL ART OF AFRICA",
-      "days": [
-        "Th"
-      ],
-      "start_time": 1600,
-      "end_time": 1845,
-      "building": "FA4",
-      "room": "311",
-      "instructor": "West M"
-    },
-    {
       "course_title": "AH 459 - ART OF LATIN AMER 1940-PRESENT",
       "days": [
         "Tu"
@@ -6626,6 +6593,28 @@
       "building": "FA4",
       "room": "108",
       "instructor": "Simms M"
+    },
+    {
+      "course_title": "AH 498 - S TOPICS ART HISTORY",
+      "days": [
+        "F"
+      ],
+      "start_time": 900,
+      "end_time": 1145,
+      "building": "FA4",
+      "room": "311",
+      "instructor": "Van Hartingsveldt M"
+    },
+    {
+      "course_title": "AH 498 - S TOPICS ART HISTORY",
+      "days": [
+        "Th"
+      ],
+      "start_time": 1600,
+      "end_time": 1845,
+      "building": "FA4",
+      "room": "311",
+      "instructor": "Brott L"
     },
     {
       "course_title": "AH 510 - GOTHIC ART",
@@ -11702,7 +11691,7 @@
       "end_time": 1345,
       "building": "MLSC",
       "room": "314",
-      "instructor": "Kosinska-Klaehn M"
+      "instructor": "Mohammadi M"
     },
     {
       "course_title": "CHEM 251 - QUANTITATIVE ANALYSIS",
@@ -12125,8 +12114,8 @@
       ],
       "start_time": 800,
       "end_time": 915,
-      "building": "AS",
-      "room": "240",
+      "building": "HSCI",
+      "room": "101",
       "instructor": "Tian F"
     },
     {
@@ -15228,8 +15217,8 @@
       ],
       "start_time": 800,
       "end_time": 915,
-      "building": "LAB",
-      "room": "224",
+      "building": "AS",
+      "room": "241",
       "instructor": "Parker S"
     },
     {
@@ -16905,8 +16894,8 @@
       ],
       "start_time": 1230,
       "end_time": 1345,
-      "building": "ED2",
-      "room": "174",
+      "building": "LA2",
+      "room": "101B",
       "instructor": "Parseghian L"
     },
     {
@@ -17345,8 +17334,8 @@
       ],
       "start_time": 800,
       "end_time": 850,
-      "building": "DESN",
-      "room": "112",
+      "building": "ECS",
+      "room": "306",
       "instructor": "Trajkovic J"
     },
     {
@@ -17786,7 +17775,7 @@
       "start_time": 1230,
       "end_time": 1345,
       "building": "ECS",
-      "room": "405",
+      "room": "404",
       "instructor": "Terrell N"
     },
     {
@@ -17822,7 +17811,7 @@
       "start_time": 1100,
       "end_time": 1215,
       "building": "ECS",
-      "room": "405",
+      "room": "411",
       "instructor": "Terrell N"
     },
     {
@@ -17835,7 +17824,7 @@
       "end_time": 1945,
       "building": "ECS",
       "room": "414",
-      "instructor": "Staff"
+      "instructor": "Sharifian A"
     },
     {
       "course_title": "CECS 326 - OPERATING SYSTEMS",
@@ -18769,7 +18758,7 @@
       "start_time": 930,
       "end_time": 1045,
       "building": "ECS",
-      "room": "414",
+      "room": "407",
       "instructor": "Terrell N"
     },
     {
@@ -19559,7 +19548,7 @@
       "start_time": 1800,
       "end_time": 1950,
       "building": "VEC",
-      "room": "224",
+      "room": "417",
       "instructor": "Hernandez Gaytan V"
     },
     {
@@ -19570,7 +19559,7 @@
       "start_time": 2000,
       "end_time": 2150,
       "building": "VEC",
-      "room": "224",
+      "room": "417",
       "instructor": "Hernandez Gaytan V"
     },
     {
@@ -20288,7 +20277,7 @@
       "end_time": 1950,
       "building": "ED2",
       "room": "174",
-      "instructor": "Erickson S"
+      "instructor": "Benning K"
     },
     {
       "course_title": "COUN 609 - COUN PSYCHOLOGY PRACTICUM",
@@ -23464,7 +23453,7 @@
       "end_time": 1645,
       "building": "HSCI",
       "room": "384",
-      "instructor": "Cockroft H"
+      "instructor": "Eves D"
     },
     {
       "course_title": "ERTH 280 - WATER RESOURCES & SOCIETY",
@@ -23567,20 +23556,8 @@
       "start_time": 900,
       "end_time": 1145,
       "building": "HSCI",
-      "room": "001",
+      "room": "384",
       "instructor": "Abbey A"
-    },
-    {
-      "course_title": "ERTH 440 - DATA ANALYSIS FOR EARTH SCI",
-      "days": [
-        "M",
-        "W"
-      ],
-      "start_time": 930,
-      "end_time": 1045,
-      "building": "HSCI",
-      "room": "381",
-      "instructor": "Pearse J"
     },
     {
       "course_title": "ERTH 443 - STRATIGRAPHY SEDIMENTOLOGY",
@@ -26951,7 +26928,7 @@
       "end_time": 2145,
       "building": "LA4",
       "room": "100",
-      "instructor": "Staff"
+      "instructor": "Campbell D"
     },
     {
       "course_title": "EDSP 558 - LITRCY SUPP STU DIVRS ABILTS",
@@ -27171,7 +27148,7 @@
       "end_time": 1250,
       "building": "CPCE",
       "room": "208",
-      "instructor": "Aguirre-Lopez D"
+      "instructor": "Crawford M"
     },
     {
       "course_title": "ENGR 102 - ACADEMIC SUCCESS SKILLS",
@@ -27301,8 +27278,8 @@
       ],
       "start_time": 1400,
       "end_time": 1645,
-      "building": "VEC",
-      "room": "330",
+      "building": "ET",
+      "room": "113",
       "instructor": "Rodriguez L"
     },
     {
@@ -27312,8 +27289,8 @@
       ],
       "start_time": 1400,
       "end_time": 1645,
-      "building": "ECS",
-      "room": "305",
+      "building": "ET",
+      "room": "113",
       "instructor": "Talluri A"
     },
     {
@@ -27610,7 +27587,7 @@
       "end_time": 915,
       "building": "LA2",
       "room": "203",
-      "instructor": "Margrave C"
+      "instructor": "Mokoko S"
     },
     {
       "course_title": "ENGL 100B - COMPOSITION II",
@@ -27967,8 +27944,8 @@
       ],
       "start_time": 1000,
       "end_time": 1050,
-      "building": "COB",
-      "room": "216",
+      "building": "LAB",
+      "room": "306",
       "instructor": "Gregory V"
     },
     {
@@ -28127,7 +28104,7 @@
       "end_time": 915,
       "building": "LA1",
       "room": "310",
-      "instructor": "Margrave C"
+      "instructor": "Acosta J"
     },
     {
       "course_title": "ENGL 102 - CRITICAL READING & WRITING",
@@ -28436,8 +28413,8 @@
       ],
       "start_time": 1000,
       "end_time": 1150,
-      "building": "VEC",
-      "room": "401",
+      "building": "AS",
+      "room": "243",
       "instructor": "MitchellSmith I"
     },
     {
@@ -28913,8 +28890,8 @@
       ],
       "start_time": 1000,
       "end_time": 1150,
-      "building": "AS",
-      "room": "243",
+      "building": "VEC",
+      "room": "401",
       "instructor": "De Simone L"
     },
     {
@@ -31132,8 +31109,8 @@
       ],
       "start_time": 1000,
       "end_time": 1150,
-      "building": "PSY",
-      "room": "324",
+      "building": "AS",
+      "room": "241",
       "instructor": "Sanchez-reyes M"
     },
     {
@@ -32315,7 +32292,7 @@
       "end_time": 1845,
       "building": "SPA",
       "room": "005",
-      "instructor": "Abumuhor I"
+      "instructor": "O'Lawrence H"
     },
     {
       "course_title": "HCA 480 - INTERNSHIP HEALTH CARE ADMIN",
@@ -35065,8 +35042,8 @@
       ],
       "start_time": 1530,
       "end_time": 1645,
-      "building": "SPA",
-      "room": "206",
+      "building": "LAB",
+      "room": "306",
       "instructor": "Williams J"
     },
     {
@@ -37480,7 +37457,7 @@
       "start_time": 1730,
       "end_time": 2130,
       "building": "KIN",
-      "room": "063",
+      "room": "051B",
       "instructor": "Staff"
     },
     {
@@ -37491,7 +37468,7 @@
       "start_time": 1730,
       "end_time": 2130,
       "building": "KIN",
-      "room": "063",
+      "room": "051B",
       "instructor": "Staff"
     },
     {
@@ -37502,7 +37479,7 @@
       "start_time": 1730,
       "end_time": 2130,
       "building": "KIN",
-      "room": "063",
+      "room": "051B",
       "instructor": "Staff"
     },
     {
@@ -37513,7 +37490,7 @@
       "start_time": 1730,
       "end_time": 2130,
       "building": "KIN",
-      "room": "063",
+      "room": "051B",
       "instructor": "Staff"
     },
     {
@@ -37524,7 +37501,7 @@
       "start_time": 1730,
       "end_time": 2130,
       "building": "KIN",
-      "room": "063",
+      "room": "051B",
       "instructor": "Staff"
     },
     {
@@ -37535,7 +37512,7 @@
       "start_time": 1730,
       "end_time": 2130,
       "building": "KIN",
-      "room": "063",
+      "room": "051B",
       "instructor": "Staff"
     },
     {
@@ -37546,7 +37523,7 @@
       "start_time": 1730,
       "end_time": 2130,
       "building": "KIN",
-      "room": "063",
+      "room": "051B",
       "instructor": "Staff"
     },
     {
@@ -37686,7 +37663,7 @@
       "start_time": 1530,
       "end_time": 1645,
       "building": "LA5",
-      "room": "248",
+      "room": "148",
       "instructor": "Delarosa R"
     },
     {
@@ -37887,8 +37864,8 @@
       ],
       "start_time": 1230,
       "end_time": 1345,
-      "building": "LA5",
-      "room": "148",
+      "building": "SPA",
+      "room": "209",
       "instructor": "Ahland C"
     },
     {
@@ -37900,7 +37877,7 @@
       "start_time": 1530,
       "end_time": 1645,
       "building": "LA5",
-      "room": "148",
+      "room": "248",
       "instructor": "Sharifi A"
     },
     {
@@ -40997,7 +40974,7 @@
       "end_time": 1650,
       "building": "KIN",
       "room": "059",
-      "instructor": "Ramezani R"
+      "instructor": "Haddadin M"
     },
     {
       "course_title": "MAE 101B - INTRO  MECHANICAL ENGINEERING",
@@ -41008,7 +40985,7 @@
       "end_time": 1750,
       "building": "KIN",
       "room": "059",
-      "instructor": "Ramezani R"
+      "instructor": "Haddadin M"
     },
     {
       "course_title": "MAE 101B - INTRO  MECHANICAL ENGINEERING",
@@ -41129,7 +41106,7 @@
       "end_time": 850,
       "building": "ET",
       "room": "019",
-      "instructor": "Sarhangnejad F"
+      "instructor": "Staff"
     },
     {
       "course_title": "MAE 272 - INTRO MANUFACTURING PROCESSES",
@@ -41140,7 +41117,7 @@
       "end_time": 1145,
       "building": "ET",
       "room": "019",
-      "instructor": "Sarhangnejad F"
+      "instructor": "Staff"
     },
     {
       "course_title": "MAE 300 - ENGR INSTRUMENTATN & MEASURMNT",
@@ -41329,7 +41306,7 @@
       "start_time": 1400,
       "end_time": 1515,
       "building": "VEC",
-      "room": "331",
+      "room": "202",
       "instructor": "Bagheri H"
     },
     {
@@ -41741,7 +41718,7 @@
       "start_time": 930,
       "end_time": 1045,
       "building": "ECS",
-      "room": "308",
+      "room": "302",
       "instructor": "Khattab A"
     },
     {
@@ -42355,6 +42332,17 @@
       "end_time": 1950,
       "building": "VEC",
       "room": "418",
+      "instructor": "Ramezani R"
+    },
+    {
+      "course_title": "MAE 459 - PROFESSIONAL PRACTICE SEMINAR",
+      "days": [
+        "Th"
+      ],
+      "start_time": 1600,
+      "end_time": 1650,
+      "building": "ECS",
+      "room": "308",
       "instructor": "Ramezani R"
     },
     {
@@ -45421,7 +45409,7 @@
       "end_time": 1530,
       "building": "OFF",
       "room": "CAMP",
-      "instructor": "Staff"
+      "instructor": "Thebe S"
     },
     {
       "course_title": "NRSG 250 - INTERMED MEDICAL SURGICAL NRSG",
@@ -55675,7 +55663,7 @@
       "end_time": 1345,
       "building": "TA",
       "room": "037",
-      "instructor": "Bange C"
+      "instructor": "Dietze A"
     },
     {
       "course_title": "THEA 113 - INTRO TO ACTING",
@@ -55771,18 +55759,6 @@
       "end_time": 1215,
       "building": "TA",
       "room": "241",
-      "instructor": "Dietze A"
-    },
-    {
-      "course_title": "THEA 113 - INTRO TO ACTING",
-      "days": [
-        "Tu",
-        "Th"
-      ],
-      "start_time": 1100,
-      "end_time": 1215,
-      "building": "TA",
-      "room": "037",
       "instructor": "Prior R"
     },
     {
