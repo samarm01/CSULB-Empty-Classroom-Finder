@@ -2,6 +2,7 @@
 
 # CSULB Empty Classroom Finder
 
+
 A simple desktop application for Windows that helps students and faculty at California State University, Long Beach find empty classrooms based on the official class schedule.
 
 
@@ -16,6 +17,8 @@ A simple desktop application for Windows that helps students and faculty at Cali
 *   **Copy Results:** Easily copy the list of available rooms to your clipboard.
 
 ---
+
+# Website: https://csulb-empty-classroom-finder.pages.dev/
 
 ## How to Download & Use (For General Users)
 
@@ -74,4 +77,4 @@ If you want to run the application directly from the source code, you'll need Py
 
 ## Disclaimer
 
-This app is based on the official CSULB Fall 2025 schedule of classes made by administration. Do not completely rely on it as it cannot predict club activities, other students, guest speakers, on-campus events, etc. Use at your own discretion.
+This app is based on the official CSULB Spring 2026 schedule of classes made by administration. Do not completely rely on it as it cannot predict club activities, other students, guest speakers, on-campus events, etc. Use at your own discretion.

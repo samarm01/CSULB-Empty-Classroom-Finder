@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-26 14:41:11",
+  "last_updated": "2026-02-04 13:05:39",
   "buildings": [
     "AS",
     "CINE",
@@ -4536,8 +4536,8 @@
       ],
       "start_time": 900,
       "end_time": 1545,
-      "building": "LA5",
-      "room": "346",
+      "building": "FA4",
+      "room": "307",
       "instructor": "Vu D"
     },
     {
@@ -5868,8 +5868,8 @@
       ],
       "start_time": 900,
       "end_time": 1545,
-      "building": "LA5",
-      "room": "346",
+      "building": "FA4",
+      "room": "307",
       "instructor": "Vu D"
     },
     {
@@ -9825,7 +9825,7 @@
       "end_time": 1045,
       "building": "ET",
       "room": "241",
-      "instructor": "Ayala P"
+      "instructor": "Ritzer J"
     },
     {
       "course_title": "BME 370 - BIO-FLUIDS AND TRANSPORT",
@@ -11598,7 +11598,7 @@
       "start_time": 1000,
       "end_time": 1050,
       "building": "PSY",
-      "room": "212",
+      "room": "201",
       "instructor": "Marinez E"
     },
     {
@@ -12830,17 +12830,6 @@
       "instructor": "Guffy G"
     },
     {
-      "course_title": "CDFS 312 - FAMILY & PERSONAL DEVELOPMENT",
-      "days": [
-        "W"
-      ],
-      "start_time": 930,
-      "end_time": 1045,
-      "building": "FCS",
-      "room": "136",
-      "instructor": "Medora N"
-    },
-    {
       "course_title": "CDFS 314 - THE OLDER CHILD",
       "days": [
         "W"
@@ -13006,18 +12995,6 @@
       "instructor": "Hur J"
     },
     {
-      "course_title": "CDFS 410 - INTL FAMILIES CROSS CUL PRSPEC",
-      "days": [
-        "Tu",
-        "Th"
-      ],
-      "start_time": 1400,
-      "end_time": 1515,
-      "building": "FCS",
-      "room": "136",
-      "instructor": "Medora N"
-    },
-    {
       "course_title": "CDFS 411 - CHILD DEVELOPMENT APPLICATIONS",
       "days": [
         "W"
@@ -13053,14 +13030,13 @@
     {
       "course_title": "CDFS 413 - CHILD & FAMILY IN COMMUNITY",
       "days": [
-        "M",
         "W"
       ],
       "start_time": 1400,
       "end_time": 1515,
       "building": "FCS",
       "room": "136",
-      "instructor": "Medora N"
+      "instructor": "Snapper C"
     },
     {
       "course_title": "CDFS 413 - CHILD & FAMILY IN COMMUNITY",
@@ -13076,14 +13052,13 @@
     {
       "course_title": "CDFS 413 - CHILD & FAMILY IN COMMUNITY",
       "days": [
-        "M",
         "W"
       ],
       "start_time": 1530,
       "end_time": 1645,
       "building": "FCS",
       "room": "136",
-      "instructor": "Medora N"
+      "instructor": "Snapper C"
     },
     {
       "course_title": "CDFS 418 - PARENT EDUCATION",
@@ -13114,8 +13089,8 @@
       ],
       "start_time": 930,
       "end_time": 1045,
-      "building": "HHS1",
-      "room": "100",
+      "building": "LA5",
+      "room": "167",
       "instructor": "Wendt M"
     },
     {
@@ -14453,8 +14428,8 @@
       ],
       "start_time": 930,
       "end_time": 1045,
-      "building": "AS",
-      "room": "235",
+      "building": "FCS",
+      "room": "136",
       "instructor": "Librandi D"
     },
     {
@@ -14642,8 +14617,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "LA5",
-      "room": "359",
+      "building": "LA1",
+      "room": "304",
       "instructor": "Contreras J"
     },
     {
@@ -14653,8 +14628,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "LAB",
-      "room": "224",
+      "building": "HHS1",
+      "room": "205",
       "instructor": "Knizewski R"
     },
     {
@@ -14686,8 +14661,8 @@
       ],
       "start_time": 930,
       "end_time": 1045,
-      "building": "LA5",
-      "room": "359",
+      "building": "LA1",
+      "room": "308",
       "instructor": "Contreras J"
     },
     {
@@ -14719,8 +14694,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "LA5",
-      "room": "359",
+      "building": "LA1",
+      "room": "308",
       "instructor": "Contreras J"
     },
     {
@@ -14741,8 +14716,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "LAB",
-      "room": "224",
+      "building": "LA1",
+      "room": "307",
       "instructor": "Tran V"
     },
     {
@@ -15167,8 +15142,8 @@
       ],
       "start_time": 800,
       "end_time": 915,
-      "building": "LA5",
-      "room": "359",
+      "building": "LA3",
+      "room": "120",
       "instructor": "Polanco C"
     },
     {
@@ -17582,8 +17557,8 @@
       ],
       "start_time": 1830,
       "end_time": 1945,
-      "building": "VEC",
-      "room": "330",
+      "building": "ECS",
+      "room": "403",
       "instructor": "Nguyen M"
     },
     {
@@ -17977,8 +17952,8 @@
       ],
       "start_time": 1730,
       "end_time": 1845,
-      "building": "VEC",
-      "room": "330",
+      "building": "ECS",
+      "room": "416",
       "instructor": "Nguyen M"
     },
     {
@@ -18804,8 +18779,8 @@
       ],
       "start_time": 1230,
       "end_time": 1345,
-      "building": "VEC",
-      "room": "331",
+      "building": "ECS",
+      "room": "405",
       "instructor": "Hernandez E"
     },
     {
@@ -20099,8 +20074,8 @@
       ],
       "start_time": 1600,
       "end_time": 1845,
-      "building": "HC",
-      "room": "130",
+      "building": "LA1",
+      "room": "308",
       "instructor": "Amaya S"
     },
     {
@@ -20474,7 +20449,7 @@
       "start_time": 1530,
       "end_time": 1645,
       "building": "HSD",
-      "room": "119",
+      "room": "111",
       "instructor": "Beckner A"
     },
     {
@@ -20532,8 +20507,8 @@
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "HSD",
-      "room": "113",
+      "building": "HHS1",
+      "room": "105",
       "instructor": "Lopez A"
     },
     {
@@ -25472,8 +25447,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "LA2",
-      "room": "205",
+      "building": "HC",
+      "room": "131",
       "instructor": "Zaid D"
     },
     {
@@ -25538,8 +25513,8 @@
       ],
       "start_time": 1600,
       "end_time": 1845,
-      "building": "LA1",
-      "room": "314",
+      "building": "KIN",
+      "room": "058",
       "instructor": "Aguilar M"
     },
     {
@@ -25704,7 +25679,7 @@
       "start_time": 1900,
       "end_time": 2145,
       "building": "LA2",
-      "room": "205",
+      "room": "200",
       "instructor": "Ruiz M"
     },
     {
@@ -31902,7 +31877,7 @@
       "start_time": 1800,
       "end_time": 2045,
       "building": "FCS",
-      "room": "123",
+      "room": "122",
       "instructor": "Martinez I"
     },
     {
@@ -32292,7 +32267,7 @@
       "end_time": 1845,
       "building": "SPA",
       "room": "005",
-      "instructor": "O'Lawrence H"
+      "instructor": "Reich A"
     },
     {
       "course_title": "HCA 480 - INTERNSHIP HEALTH CARE ADMIN",
@@ -41106,7 +41081,7 @@
       "end_time": 850,
       "building": "ET",
       "room": "019",
-      "instructor": "Staff"
+      "instructor": "Haddadin M"
     },
     {
       "course_title": "MAE 272 - INTRO MANUFACTURING PROCESSES",
@@ -41497,8 +41472,8 @@
       ],
       "start_time": 1730,
       "end_time": 1845,
-      "building": "SPA",
-      "room": "105",
+      "building": "VEC",
+      "room": "418",
       "instructor": "Hashempour D"
     },
     {
@@ -44981,17 +44956,6 @@
       "building": "UMC",
       "room": "A100",
       "instructor": "Friedrich A"
-    },
-    {
-      "course_title": "MUS 535B - SONG LITERATURE II",
-      "days": [
-        "W"
-      ],
-      "start_time": 1600,
-      "end_time": 1750,
-      "building": "UMC",
-      "room": "C401",
-      "instructor": "Buffett J"
     },
     {
       "course_title": "MUS 536 - OPERA REPERTOIRE",
@@ -56725,17 +56689,6 @@
       ],
       "start_time": 900,
       "end_time": 950,
-      "building": "LA5",
-      "room": "152",
-      "instructor": "Nguyen-Rodriguez S"
-    },
-    {
-      "course_title": "UNIV 495 - BUILD LEARNING COMMUNITY",
-      "days": [
-        "F"
-      ],
-      "start_time": 1700,
-      "end_time": 1750,
       "building": "LA5",
       "room": "152",
       "instructor": "Nguyen-Rodriguez S"
