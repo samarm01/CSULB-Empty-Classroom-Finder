@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSULB Room Finder</title>
+    <title>CSULB Empty Classroom Finder</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background-color: #f4f4f9; }
         h1, h2, h3 { color: #333; text-align: center; }
@@ -33,28 +33,49 @@
         #results-list li { background-color: #e9ecef; padding: 12px; margin-bottom: 8px; border-radius: 4px; display: flex; justify-content: space-between; }
         .available-until { color: #d9534f; font-weight: bold; font-size: 0.9em; }
         
-        .schedule-item { border-left: 3px solid #005A9C; padding-left: 15px; margin-bottom: 15px; }
+        .schedule-item { border-left: 3px solid #005A9C; padding-left: 15px; margin-bottom: 15px; background-color: #f8f9fa; padding: 10px; border-radius: 0 4px 4px 0;}
         .schedule-item p { margin: 4px 0; }
         #copy-button { background-color: #6c757d; margin-top: 10px; margin-bottom: 15px; display: none; }
         #disclaimer { font-size: 10px; color: #666; text-align: center; margin-top: 20px; }
+        
+        /* Stylize dropdown option groups for better visibility */
+        optgroup { font-weight: bold; color: #005A9C; }
+        option { color: #333; }
     </style>
 </head>
 <body>
     <div id="app-container">
-        <h1>CSULB Room Finder</h1>
+        <h1>CSULB Empty Classroom Finder</h1>
         <p id="last-updated">Loading data...</p>
 
         <!-- MASTER FILTER: Applies to both Search methods -->
         <div class="grid-layout" style="background-color: #fafafa; padding: 15px; border-radius: 8px;">
             <p><strong>Step 1: Where are you looking?</strong></p>
             <label for="zone-filter">Campus Zone:</label>
+            
+            <!-- Refactored using optgroups for clean organization -->
             <select id="zone-filter">
                 <option value="All">All Buildings</option>
-                <option value="Liberal Arts">Liberal Arts (LA1-5, MHB, PSY)</option>
-                <option value="Engineering">Engineering (ECS, EN, VEC)</option>
-                <option value="Fine Arts">Fine Arts (FA1-4)</option>
-                <option value="Business">Business (CBA)</option>
-                <option value="Specific">➜ Specific Building...</option>
+                
+                <optgroup label="Campus Geography">
+                    <option value="Upper Campus">Upper Campus (General)</option>
+                    <option value="Lower Campus">Lower Campus (General)</option>
+                </optgroup>
+
+                <optgroup label="Academic Colleges">
+                    <option value="Liberal Arts">College of Liberal Arts</option>
+                    <option value="Engineering">College of Engineering</option>
+                    <option value="Science">College of Science</option>
+                    <option value="Health">College of Health & Human Services</option>
+                    <option value="Arts">College of the Arts</option>
+                    <option value="Business">College of Business</option>
+                    <option value="Education">College of Education</option>
+                </optgroup>
+
+                <optgroup label="Specialty Spaces">
+                    <option value="Auditoriums">Auditoriums</option>
+                    <option value="Specific">➜ Specific Building...</option>
+                </optgroup>
             </select>
 
             <!-- This row is hidden by default using inline CSS -->
@@ -74,7 +95,7 @@
             <button id="btn-available-now" class="full-width-btn">🟢 Find Available Now</button>
         </div>
 
-        <!-- FORM: Find by Manual Time -->
+        <!-- FORM 1: Find by Manual Time -->
         <form id="find-empty-form" class="grid-layout">
             <p><strong>Or search for a future time:</strong></p>
             <label for="day">Day:</label>
@@ -82,12 +103,26 @@
                 <option value="M">Monday</option><option value="Tu">Tuesday</option><option value="W">Wednesday</option>
                 <option value="Th">Thursday</option><option value="F">Friday</option><option value="Sa">Saturday</option>
             </select>
-            <!-- Changed to type="time" for native UI picker -->
             <label for="start_time">Start Time:</label>
             <input type="time" id="start_time" name="start_time" required>
             <label for="end_time">End Time:</label>
             <input type="time" id="end_time" name="end_time" required>
             <button type="submit" class="full-width-btn">Search Custom Time</button>
+        </form>
+
+        <!-- FORM 2: Check a Specific Room -->
+        <form id="check-room-form" class="grid-layout" style="background-color: #fdfbf7; padding: 15px; border-radius: 8px;">
+            <p><strong>Step 3: Check a specific room's daily schedule:</strong></p>
+            <label for="check-day">Day:</label>
+            <select id="check-day" name="check-day">
+                <option value="M">Monday</option><option value="Tu">Tuesday</option><option value="W">Wednesday</option>
+                <option value="Th">Thursday</option><option value="F">Friday</option><option value="Sa">Saturday</option>
+            </select>
+            <label for="classroom">Classroom:</label>
+            <input type="text" id="classroom" name="classroom" list="room-list" placeholder="e.g., LA1-200" required>
+            <datalist id="room-list"></datalist>
+            
+            <button type="submit" class="full-width-btn" style="background-color: #6c757d;">Check Room Schedule</button>
         </form>
 
         <!-- RESULTS SECTION -->
@@ -97,21 +132,35 @@
             <div id="results-list"><p style="text-align: center;">Select a filter and search to see rooms.</p></div>
         </div>
 
-        <p id="disclaimer">Based on the official CSULB schedule. Use at your own discretion. Created by Matthew Samar.</p>
+        <p id="disclaimer">This app is based on the official CSULB Spring 2026 schedule of classes made by administration. Do not completely rely on it as it cannot predict club activities, other students, guest speakers, on-campus events, etc. Use at your own discretion. Initially created by Matthew Samar on 9/11/25. Check out the github https://github.com/samarm01/CSULB-Empty-Classroom-Finder</p>
     </div>
 
     <script>
         let allClassData = [];
         let allBuildings = [];
 
-        // --- DICTIONARY FOR MACRO ZONES ---
-        // This maps a broad category to an array of specific building codes.
+        // --- NEW DICTIONARIES FOR ZONES & COLLEGES ---
         const zoneMap = {
+            'Upper Campus': ['LA1', 'LA2', 'LA3', 'LA4', 'LA5', 'MHB', 'PSY', 'HSCI', 'MLSC', 'PH1', 'FA1', 'FA2', 'FA3', 'FA4', 'EED', 'ED2', 'CINE', 'LH', 'MM','AS'],
+            'Lower Campus': ['CBA', 'COB', 'ECS', 'EN2', 'EN3', 'EN4', 'ET', 'VEC', 'DESN', 'HHS1', 'HHS2', 'HSD', 'KIN', 'FCS', 'UMC'],
             'Liberal Arts': ['LA1', 'LA2', 'LA3', 'LA4', 'LA5', 'MHB', 'PSY'],
             'Engineering': ['ECS', 'EN2', 'EN3', 'EN4', 'ET', 'VEC'],
-            'Fine Arts': ['FA1', 'FA2', 'FA3', 'FA4'],
-            'Business': ['CBA']
+            'Science': ['HSCI', 'MLSC', 'PH1', 'MIC'],
+            'Health': ['HHS1', 'HHS2', 'HSD', 'KIN', 'FCS', 'NUR'],
+            'Arts': ['FA1', 'FA2', 'FA3', 'FA4', 'DESN', 'UT', 'UMC', 'CINE'],
+            'Business': ['COB', 'CBA'],
+            'Education': ['EED', 'ED2']
         };
+
+        // --- OFFICIAL AUDITORIUMS LIST (Specific Rooms) ---
+        // Derived from CSULB's Academic Scheduling official list
+        const auditoriumsList = [
+            'LH-150', 'LH-151', 'HC-100', 'HC-120', 'COB-139A', 'COB-139', 
+            'COB-140A', 'COB-140', 'ECS-105', 'HSCI-100', 'HSCI-102',
+            'HSCI-103','HSCI-105', 'KIN-59', 'MM-100', 'MM-200', 'LA4-120', 
+            'DESN-112', 'FCS-126', 'LA2-120', 'LA3-120', 'PSY-150', 
+            'UT-108', 'PH1-140', 'PH1-141'
+        ];
 
         // --- DATA LOADING ---
         window.onload = async () => {
@@ -121,12 +170,25 @@
                 allClassData = data.classes;
                 allBuildings = data.buildings;
 
+                // Populate Specific Building Dropdown
                 const bldgDropdown = document.getElementById('specific-building');
                 allBuildings.forEach(b => {
                     const option = document.createElement('option');
                     option.value = b; option.textContent = b;
                     bldgDropdown.appendChild(option);
                 });
+
+                // Populate Datalist for Room Checking
+                const roomSet = new Set();
+                allClassData.forEach(cls => roomSet.add(`${cls.building}-${cls.room}`));
+                const dataList = document.getElementById('room-list');
+                
+                [...roomSet].sort().forEach(room => {
+                    const option = document.createElement('option');
+                    option.value = room;
+                    dataList.appendChild(option);
+                });
+
                 document.getElementById('last-updated').textContent = `Data last updated: ${data.last_updated}`;
             } catch (error) {
                 console.error('Failed to load schedule.json:', error);
@@ -134,7 +196,6 @@
         };
 
         // --- EVENT LISTENER: TOGGLE SPECIFIC BUILDING DROPDOWN ---
-        // Listens for changes on the macro zone dropdown. If "Specific" is chosen, reveal the building dropdown.
         document.getElementById('zone-filter').addEventListener('change', function() {
             const specificLabel = document.getElementById('lbl-specific-building');
             const specificDropdown = document.getElementById('specific-building');
@@ -148,25 +209,20 @@
         });
 
         // --- TIME MATH HELPER FUNCTIONS ---
-        
-        // 1. Converts HTML Time "14:30" string to your integer format 1430
         function timeStrToInt(timeStr) {
             if (!timeStr) return NaN;
             return parseInt(timeStr.replace(':', ''));
         }
 
-        // 2. Adds minutes to your integer time format (e.g. 1430 + 60 mins = 1530)
         function addMinutesToInt(timeInt, addMins) {
             let hours = Math.floor(timeInt / 100);
             let mins = timeInt % 100;
-            let totalMins = (hours * 60) + mins + parseInt(addMins); // Convert everything to total minutes
-            
+            let totalMins = (hours * 60) + mins + parseInt(addMins); 
             let newHours = Math.floor(totalMins / 60);
             let newMins = totalMins % 60;
-            return (newHours * 100) + newMins; // Convert back to integer (e.g., 15 * 100 + 30 = 1530)
+            return (newHours * 100) + newMins; 
         }
 
-        // 3. Converts your integer format (1430) into a readable "2:30 PM"
         function intToReadableTime(timeInt) {
             if (timeInt === Infinity) return "End of Day";
             let hours = Math.floor(timeInt / 100);
@@ -174,66 +230,69 @@
             let ampm = hours >= 12 ? 'PM' : 'AM';
             
             hours = hours % 12;
-            hours = hours ? hours : 12; // If hour is 0 (midnight), make it 12
-            let minsStr = mins < 10 ? '0' + mins : mins; // Add leading zero to minutes if needed
+            hours = hours ? hours : 12; 
+            let minsStr = mins < 10 ? '0' + mins : mins; 
             
             return `${hours}:${minsStr} ${ampm}`;
         }
 
-        // --- GET TARGET BUILDINGS HELPER ---
-        // Looks at the Master Filters and returns an array of building strings we care about
-        function getTargetBuildings() {
-            const zone = document.getElementById('zone-filter').value;
-            if (zone === 'Specific') {
-                return [document.getElementById('specific-building').value];
-            } else if (zone === 'All') {
-                return allBuildings;
-            } else {
-                return zoneMap[zone] || []; // Returns the array from our dictionary, or empty array if failed
-            }
-        }
-
         // --- CORE LOGIC: FIND EMPTY ROOMS ---
-        function findEmptyRooms(day, startTime, endTime, targetBuildings) {
+        function findEmptyRooms(day, startTime, endTime) {
             const allRoomsInZone = new Set();
             const occupiedRooms = new Set();
+            
+            const zoneFilterValue = document.getElementById('zone-filter').value;
+            const isAuditoriumMode = (zoneFilterValue === 'Auditoriums');
+            
+            let validBuildings = [];
+            
+            // If we are NOT in Auditorium mode, establish which buildings we care about
+            if (!isAuditoriumMode) {
+                if (zoneFilterValue === 'Specific') {
+                    validBuildings = [document.getElementById('specific-building').value];
+                } else if (zoneFilterValue === 'All') {
+                    validBuildings = allBuildings;
+                } else {
+                    validBuildings = zoneMap[zoneFilterValue] || [];
+                }
+            }
 
             for (const cls of allClassData) {
-                // If the class is inside a building we care about...
-                if (targetBuildings.includes(cls.building)) {
-                    const roomString = `${cls.building}-${cls.room}`;
-                    allRoomsInZone.add(roomString); // Add to our list of known rooms
+                const roomString = `${cls.building}-${cls.room}`;
+                let inZone = false;
 
-                    // If the class is on the right day AND overlaps with our time block...
+                // Determine if this specific class is in our selected zone
+                if (isAuditoriumMode) {
+                    // Only care if it matches a string in our hardcoded Auditoriums list
+                    inZone = auditoriumsList.includes(roomString);
+                } else {
+                    // Standard check: Does the class building code match our validBuildings array?
+                    inZone = validBuildings.includes(cls.building);
+                }
+
+                if (inZone) {
+                    allRoomsInZone.add(roomString); 
+
                     if (cls.days.includes(day) && cls.start_time < endTime && cls.end_time > startTime) {
-                        occupiedRooms.add(roomString); // Mark it as occupied!
+                        occupiedRooms.add(roomString); 
                     }
                 }
             }
 
-            // The empty rooms are simply all rooms MINUS the occupied rooms
             let emptyRooms = [...allRoomsInZone].filter(room => !occupiedRooms.has(room)).sort();
             
-            // Now, let's figure out WHEN these empty rooms stop being empty
             let resultsWithCutoffs = emptyRooms.map(roomString => {
-                // Find all classes in this specific room on this day
                 let classesInRoomToday = allClassData.filter(cls => 
                     `${cls.building}-${cls.room}` === roomString && cls.days.includes(day)
                 );
                 
-                let nextClassStart = Infinity; // Assume empty until end of day by default
-
-                // Loop through today's classes to find the earliest one that starts AFTER our search time
+                let nextClassStart = Infinity; 
                 for (let cls of classesInRoomToday) {
                     if (cls.start_time >= startTime && cls.start_time < nextClassStart) {
                         nextClassStart = cls.start_time;
                     }
                 }
-
-                return {
-                    room: roomString,
-                    availableUntil: nextClassStart // integer time (e.g. 1530)
-                };
+                return { room: roomString, availableUntil: nextClassStart };
             });
 
             return resultsWithCutoffs;
@@ -242,20 +301,14 @@
         // --- EVENT: "AVAILABLE NOW" BUTTON ---
         document.getElementById('btn-available-now').addEventListener('click', () => {
             const now = new Date();
-            
-            // Map Javascript's getDay() (0=Sun, 1=Mon) to CSULB format
             const dayMap = ['Su', 'M', 'Tu', 'W', 'Th', 'F', 'Sa'];
             const currentDay = dayMap[now.getDay()]; 
             
-            // Convert current time to integer format (e.g. 14 hours & 30 mins = 1430)
             const currentIntTime = (now.getHours() * 100) + now.getMinutes();
-            
-            // Calculate end time based on the duration dropdown
             const durationMins = document.getElementById('duration').value;
             const endIntTime = addMinutesToInt(currentIntTime, durationMins);
             
-            const targetBuildings = getTargetBuildings();
-            const results = findEmptyRooms(currentDay, currentIntTime, endIntTime, targetBuildings);
+            const results = findEmptyRooms(currentDay, currentIntTime, endIntTime);
             
             document.getElementById('results-header').textContent = `Available Right Now (${results.length} found)`;
             displayResults(results);
@@ -266,7 +319,6 @@
             event.preventDefault();
             
             const day = document.getElementById('day').value;
-            // The HTML input outputs "14:30", so we use our helper to make it 1430
             const startTime = timeStrToInt(document.getElementById('start_time').value);
             const endTime = timeStrToInt(document.getElementById('end_time').value);
             
@@ -275,14 +327,36 @@
                 return;
             }
 
-            const targetBuildings = getTargetBuildings();
-            const results = findEmptyRooms(day, startTime, endTime, targetBuildings);
+            const results = findEmptyRooms(day, startTime, endTime);
             
             document.getElementById('results-header').textContent = `Results (${results.length} found)`;
             displayResults(results);
         });
 
-        // --- UI HELPER: DISPLAY RESULTS ---
+        // --- EVENT: "CHECK SPECIFIC ROOM" FORM ---
+        document.getElementById('check-room-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            const day = document.getElementById('check-day').value;
+            const classroom = document.getElementById('classroom').value.toUpperCase().trim();
+
+            if (!classroom || !classroom.includes('-')) {
+                resultsList.innerHTML = '<p style="color: red; text-align:center;">Please select a valid room from the dropdown.</p>'; 
+                return;
+            }
+
+            let schedule = allClassData.filter(cls => 
+                `${cls.building}-${cls.room}` === classroom && cls.days.includes(day)
+            );
+
+            schedule.sort((a, b) => a.start_time - b.start_time);
+
+            document.getElementById('results-header').textContent = `Schedule for ${classroom} on ${day}`;
+            displayRoomSchedule(schedule, classroom, day);
+        });
+
+
+        // --- UI HELPER: DISPLAY EMPTY ROOM RESULTS ---
         const resultsList = document.getElementById('results-list');
         const copyButton = document.getElementById('copy-button');
 
@@ -298,7 +372,6 @@
             const ul = document.createElement('ul');
             roomsArray.forEach(item => {
                 const li = document.createElement('li');
-                // Create left side (room name) and right side (available until)
                 const roomSpan = document.createElement('span');
                 roomSpan.textContent = item.room;
                 
@@ -314,9 +387,47 @@
             copyButton.style.display = 'block';
         }
 
+        // --- UI HELPER: DISPLAY SPECIFIC ROOM SCHEDULE ---
+        function displayRoomSchedule(schedule, classroom, selectedDay) {
+            resultsList.innerHTML = '';
+            copyButton.style.display = 'none';
+
+            const now = new Date();
+            const dayMap = ['Su', 'M', 'Tu', 'W', 'Th', 'F', 'Sa'];
+            const currentDay = dayMap[now.getDay()];
+            const currentIntTime = (now.getHours() * 100) + now.getMinutes();
+            
+            let htmlContent = '';
+
+            if (currentDay === selectedDay) {
+                let isOccupied = schedule.some(cls => currentIntTime >= cls.start_time && currentIntTime < cls.end_time);
+                
+                if (isOccupied) {
+                    htmlContent += `<div style="text-align: center; margin-bottom: 20px;"><span style="background-color: #f8d7da; color: #721c24; padding: 6px 12px; border-radius: 4px; font-weight: bold; border: 1px solid #f5c6cb;">🔴 CURRENTLY OCCUPIED</span></div>`;
+                } else {
+                    htmlContent += `<div style="text-align: center; margin-bottom: 20px;"><span style="background-color: #d4edda; color: #155724; padding: 6px 12px; border-radius: 4px; font-weight: bold; border: 1px solid #c3e6cb;">🟢 CURRENTLY EMPTY</span></div>`;
+                }
+            }
+
+            if (schedule.length === 0) {
+                htmlContent += `<p style="text-align:center;">No classes scheduled in ${classroom} on this day.</p>`;
+            } else {
+                schedule.forEach(s => {
+                    htmlContent += `
+                        <div class="schedule-item">
+                            <p class="course-title" style="font-weight:bold;">${s.course_title}</p>
+                            <p><strong>Instructor:</strong> ${s.instructor}</p>
+                            <p><strong>Time:</strong> ${intToReadableTime(s.start_time)} - ${intToReadableTime(s.end_time)}</p>
+                        </div>
+                    `;
+                });
+            }
+            
+            resultsList.innerHTML = htmlContent;
+        }
+
         // --- EVENT: COPY BUTTON ---
         copyButton.addEventListener('click', () => {
-            // Get plain text of the results (formats nicely due to flexbox layout in browser)
             const textToCopy = resultsList.innerText; 
             navigator.clipboard.writeText(textToCopy).then(() => {
                 const originalText = copyButton.textContent;
