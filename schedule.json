@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26 09:01:56",
+  "last_updated": "2026-08-27 19:02:17",
   "buildings": [
     "AS",
     "CINE",
@@ -9206,8 +9206,8 @@
       ],
       "start_time": 1230,
       "end_time": 1345,
-      "building": "AS",
-      "room": "235",
+      "building": "MM",
+      "room": "100",
       "instructor": "Suarez C"
     },
     {
@@ -10761,7 +10761,7 @@
       "end_time": 850,
       "building": "HC",
       "room": "122",
-      "instructor": "Kiasatpour I"
+      "instructor": "Ahmed A"
     },
     {
       "course_title": "CHEM 95 - FOUNDATIONS FOR GEN CHEM",
@@ -12910,8 +12910,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "LA1",
-      "room": "312",
+      "building": "LA5",
+      "room": "267",
       "instructor": "Perez A"
     },
     {
@@ -14171,7 +14171,7 @@
       "start_time": 1200,
       "end_time": 1445,
       "building": "CINE",
-      "room": "123",
+      "room": "203",
       "instructor": "Cheng J"
     },
     {
@@ -15665,7 +15665,7 @@
       "start_time": 930,
       "end_time": 1045,
       "building": "ED2",
-      "room": "174",
+      "room": "160B",
       "instructor": "Ohlsen-Esparza D"
     },
     {
@@ -19385,7 +19385,7 @@
       "end_time": 1215,
       "building": "VEC",
       "room": "321",
-      "instructor": "Staff"
+      "instructor": "Lee K"
     },
     {
       "course_title": "CEM 121 - CONSTRUCTION DRAWING I",
@@ -19529,7 +19529,7 @@
       "end_time": 1850,
       "building": "VEC",
       "room": "218",
-      "instructor": "Staff"
+      "instructor": "Lee K"
     },
     {
       "course_title": "CEM 206 - TRENDS CONSTRUCTION ENGR MGMT",
@@ -19540,7 +19540,7 @@
       "end_time": 2145,
       "building": "VEC",
       "room": "218",
-      "instructor": "Staff"
+      "instructor": "Lee K"
     },
     {
       "course_title": "CEM 225 - RES/LIGHT COM CONST PRAC & EST",
@@ -21074,8 +21074,8 @@
       ],
       "start_time": 930,
       "end_time": 1045,
-      "building": "ET",
-      "room": "009",
+      "building": "VEC",
+      "room": "401",
       "instructor": "Vickovic S"
     },
     {
@@ -21517,6 +21517,18 @@
       "instructor": "Schug R"
     },
     {
+      "course_title": "CRJU 530 - CJ ETHICS, VALUES, DIVERSITY",
+      "days": [
+        "M",
+        "W"
+      ],
+      "start_time": 930,
+      "end_time": 1045,
+      "building": "ET",
+      "room": "009",
+      "instructor": "Lopez A"
+    },
+    {
       "course_title": "CRJU 535 - CRIMINAL JUSTICE POLICY",
       "days": [
         "Tu"
@@ -21538,6 +21550,17 @@
       "building": "HHS1",
       "room": "205",
       "instructor": "Choi A"
+    },
+    {
+      "course_title": "CRJU 550 - CONSTITUTIONAL CRIM PROCEDURE",
+      "days": [
+        "W"
+      ],
+      "start_time": 1900,
+      "end_time": 2145,
+      "building": "ET",
+      "room": "107",
+      "instructor": "Bogardus K"
     },
     {
       "course_title": "CRJU 602 - CRIME AND INEQUALITY",
@@ -21906,7 +21929,7 @@
       "end_time": 1240,
       "building": "DC",
       "room": "S317",
-      "instructor": "Akuchu T"
+      "instructor": "Thompson-Stout D"
     },
     {
       "course_title": "DANC 210B - DANCES AFRICAN DIASPORA I",
@@ -22039,7 +22062,7 @@
       "end_time": 1240,
       "building": "DC",
       "room": "S316",
-      "instructor": "Thompson-Stout D"
+      "instructor": "Akuchu T"
     },
     {
       "course_title": "DANC 310B - DANCES AFRICAN DIASPORA II",
@@ -24067,7 +24090,7 @@
       "start_time": 1100,
       "end_time": 1215,
       "building": "HSCI",
-      "room": "381",
+      "room": "281",
       "instructor": "Stevens L"
     },
     {
@@ -27900,8 +27923,8 @@
       ],
       "start_time": 1600,
       "end_time": 1845,
-      "building": "LA1",
-      "room": "314",
+      "building": "HC",
+      "room": "133",
       "instructor": "Hume S"
     },
     {
@@ -27911,8 +27934,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "LA1",
-      "room": "314",
+      "building": "HC",
+      "room": "133",
       "instructor": "Hume S"
     },
     {
@@ -28208,8 +28231,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28219,8 +28242,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28230,8 +28253,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28241,8 +28264,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28252,8 +28275,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28505,8 +28528,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28516,8 +28539,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28527,8 +28550,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28538,8 +28561,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28549,8 +28572,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "HC",
-      "room": "133",
+      "building": "LA5",
+      "room": "151",
       "instructor": "Bisorca V"
     },
     {
@@ -28804,7 +28827,7 @@
       "end_time": 2145,
       "building": "ED2",
       "room": "158",
-      "instructor": "Prager J"
+      "instructor": "Campbell D"
     },
     {
       "course_title": "EDSP 410 - INCLUSIVE&EQUITABLE PRACTICES",
@@ -29334,7 +29357,7 @@
       "end_time": 1050,
       "building": "KIN",
       "room": "059",
-      "instructor": "Staff"
+      "instructor": "Abouzeid D"
     },
     {
       "course_title": "ENGR 101 - INTRO ENGINEERING PROFESSION",
@@ -29356,7 +29379,7 @@
       "end_time": 1850,
       "building": "KIN",
       "room": "059",
-      "instructor": "Staff"
+      "instructor": "Seng A"
     },
     {
       "course_title": "ENGR 101 - INTRO ENGINEERING PROFESSION",
@@ -29400,7 +29423,7 @@
       "end_time": 1850,
       "building": "ECS",
       "room": "306",
-      "instructor": "Staff"
+      "instructor": "Johnson N"
     },
     {
       "course_title": "ENGR 101 - INTRO ENGINEERING PROFESSION",
@@ -29444,7 +29467,7 @@
       "end_time": 1350,
       "building": "CPCE",
       "room": "206",
-      "instructor": "Staff"
+      "instructor": "Crawford M"
     },
     {
       "course_title": "ENGR 101 - INTRO ENGINEERING PROFESSION",
@@ -29477,7 +29500,7 @@
       "end_time": 1250,
       "building": "EN2",
       "room": "107",
-      "instructor": "Staff"
+      "instructor": "Buharie F"
     },
     {
       "course_title": "ENGR 101 - INTRO ENGINEERING PROFESSION",
@@ -29499,7 +29522,7 @@
       "end_time": 1150,
       "building": "EN2",
       "room": "103",
-      "instructor": "Staff"
+      "instructor": "Akhtar S"
     },
     {
       "course_title": "ENGR 101 - INTRO ENGINEERING PROFESSION",
@@ -29510,7 +29533,7 @@
       "end_time": 1150,
       "building": "CPCE",
       "room": "208",
-      "instructor": "Staff"
+      "instructor": "Crawford M"
     },
     {
       "course_title": "ENGR 101 - INTRO ENGINEERING PROFESSION",
@@ -29521,7 +29544,7 @@
       "end_time": 1150,
       "building": "CPCE",
       "room": "308",
-      "instructor": "Staff"
+      "instructor": "Reyes A"
     },
     {
       "course_title": "ENGR 101 - INTRO ENGINEERING PROFESSION",
@@ -29532,7 +29555,7 @@
       "end_time": 1620,
       "building": "VEC",
       "room": "501",
-      "instructor": "Staff"
+      "instructor": "Reyes A"
     },
     {
       "course_title": "ENGR 101H - INTRO ENGINEERING PROFESSION",
@@ -30350,7 +30373,7 @@
       "start_time": 930,
       "end_time": 1045,
       "building": "LA1",
-      "room": "212",
+      "room": "305",
       "instructor": "Stavast J"
     },
     {
@@ -30529,8 +30552,8 @@
       ],
       "start_time": 1700,
       "end_time": 1815,
-      "building": "HC",
-      "room": "135",
+      "building": "LA2",
+      "room": "101A",
       "instructor": "Simoes M"
     },
     {
@@ -31220,8 +31243,8 @@
       ],
       "start_time": 1000,
       "end_time": 1150,
-      "building": "PSY",
-      "room": "212",
+      "building": "LA5",
+      "room": "261",
       "instructor": "De Simone L"
     },
     {
@@ -31566,8 +31589,8 @@
       ],
       "start_time": 1530,
       "end_time": 1720,
-      "building": "PSY",
-      "room": "212",
+      "building": "LA2",
+      "room": "105",
       "instructor": "Li M"
     },
     {
@@ -34747,8 +34770,8 @@
       ],
       "start_time": 1530,
       "end_time": 1645,
-      "building": "LA2",
-      "room": "202",
+      "building": "EED",
+      "room": "041",
       "instructor": "Chew K"
     },
     {
@@ -35517,8 +35540,8 @@
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "LA2",
-      "room": "104",
+      "building": "LA5",
+      "room": "149",
       "instructor": "Barton N"
     },
     {
@@ -35836,8 +35859,8 @@
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "LA5",
-      "room": "149",
+      "building": "LA2",
+      "room": "104",
       "instructor": "Cleary P"
     },
     {
@@ -36607,8 +36630,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "COB",
-      "room": "214",
+      "building": "FCS",
+      "room": "136",
       "instructor": "Boatman H"
     },
     {
@@ -40230,8 +40253,8 @@
       ],
       "start_time": 1530,
       "end_time": 1645,
-      "building": "LA2",
-      "room": "202",
+      "building": "EED",
+      "room": "041",
       "instructor": "Chew K"
     },
     {
@@ -44069,7 +44092,7 @@
       "end_time": 1515,
       "building": "VEC",
       "room": "418",
-      "instructor": "Staff"
+      "instructor": "Johnson N"
     },
     {
       "course_title": "MAE 305 - NUMERICAL METHODS IN MAE",
@@ -44550,8 +44573,8 @@
       ],
       "start_time": 1730,
       "end_time": 1845,
-      "building": "ET",
-      "room": "229",
+      "building": "SPA",
+      "room": "204",
       "instructor": "Janani S"
     },
     {
@@ -44755,7 +44778,7 @@
       "start_time": 1900,
       "end_time": 2015,
       "building": "VEC",
-      "room": "418",
+      "room": "518",
       "instructor": "Wang J"
     },
     {
@@ -44924,6 +44947,18 @@
       "instructor": "Gramajo G"
     },
     {
+      "course_title": "MAE 376 - MODELING ANALYSIS DYNAMIC SYS",
+      "days": [
+        "M",
+        "W"
+      ],
+      "start_time": 1730,
+      "end_time": 1845,
+      "building": "SPA",
+      "room": "105",
+      "instructor": "Gramajo G"
+    },
+    {
       "course_title": "MAE 381 - FUND OF SPACECRAFT DYNAMICS",
       "days": [
         "Tu",
@@ -44954,8 +44989,8 @@
       ],
       "start_time": 1800,
       "end_time": 1850,
-      "building": "VEC",
-      "room": "331",
+      "building": "HHS1",
+      "room": "105",
       "instructor": "Hewitt G"
     },
     {
@@ -53353,10 +53388,10 @@
     {
       "course_title": "PHYS 494 - SEMINAR IN PHYSICS",
       "days": [
-        "Th"
+        "F"
       ],
-      "start_time": 1230,
-      "end_time": 1320,
+      "start_time": 800,
+      "end_time": 850,
       "building": "HSCI",
       "room": "231",
       "instructor": "Zinn J"
@@ -53535,10 +53570,10 @@
     {
       "course_title": "PHYS 594 - SEMINAR IN PHYSICS",
       "days": [
-        "Th"
+        "F"
       ],
-      "start_time": 1230,
-      "end_time": 1320,
+      "start_time": 800,
+      "end_time": 850,
       "building": "HSCI",
       "room": "231",
       "instructor": "Zinn J"
@@ -56058,29 +56093,6 @@
       "instructor": "Schenkemeyer M"
     },
     {
-      "course_title": "REC 340 - LEISURE CONTEMPORARY SOCIETY",
-      "days": [
-        "Tu",
-        "Th"
-      ],
-      "start_time": 800,
-      "end_time": 915,
-      "building": "HHS1",
-      "room": "201",
-      "instructor": "Yang H"
-    },
-    {
-      "course_title": "REC 340 - LEISURE CONTEMPORARY SOCIETY",
-      "days": [
-        "W"
-      ],
-      "start_time": 1600,
-      "end_time": 1845,
-      "building": "HHS1",
-      "room": "201",
-      "instructor": "Staff"
-    },
-    {
       "course_title": "REC 341 - EVALUATION & RESEARCH",
       "days": [
         "M",
@@ -56285,8 +56297,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "LA1",
-      "room": "312",
+      "building": "LA5",
+      "room": "267",
       "instructor": "Perez A"
     },
     {
@@ -57571,8 +57583,8 @@
       ],
       "start_time": 1230,
       "end_time": 1515,
-      "building": "LAB",
-      "room": "114",
+      "building": "HHS1",
+      "room": "100",
       "instructor": "Alani S"
     },
     {
@@ -57736,8 +57748,8 @@
       ],
       "start_time": 1230,
       "end_time": 1515,
-      "building": "LA1",
-      "room": "210",
+      "building": "HHS1",
+      "room": "100",
       "instructor": "Alani S"
     },
     {
@@ -57758,8 +57770,8 @@
       ],
       "start_time": 1230,
       "end_time": 1515,
-      "building": "LA1",
-      "room": "210",
+      "building": "LAB",
+      "room": "114",
       "instructor": "Vento-Wilson M"
     },
     {
@@ -57835,8 +57847,8 @@
         "Tu",
         "Th"
       ],
-      "start_time": 1500,
-      "end_time": 1615,
+      "start_time": 1545,
+      "end_time": 1700,
       "building": "LAB",
       "room": "117A",
       "instructor": "Yu C"
@@ -57871,8 +57883,8 @@
         "M",
         "W"
       ],
-      "start_time": 1500,
-      "end_time": 1615,
+      "start_time": 1545,
+      "end_time": 1700,
       "building": "LAB",
       "room": "117A",
       "instructor": "Yu C"
