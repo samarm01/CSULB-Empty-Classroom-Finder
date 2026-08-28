@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-27 19:02:17",
+  "last_updated": "2026-08-28 20:09:19",
   "buildings": [
     "AS",
     "CINE",
@@ -4197,7 +4197,7 @@
       "start_time": 1600,
       "end_time": 1845,
       "building": "FA3",
-      "room": "104F",
+      "room": "108",
       "instructor": "Ciborowski T"
     },
     {
@@ -4563,7 +4563,7 @@
       "end_time": 1145,
       "building": "FA4",
       "room": "203",
-      "instructor": "Mcinvale N"
+      "instructor": "McInvale N"
     },
     {
       "course_title": "ART 383 - CORE STUDIO: PAINTING - LIFE",
@@ -5831,7 +5831,7 @@
       "start_time": 1600,
       "end_time": 1845,
       "building": "FA3",
-      "room": "104F",
+      "room": "108",
       "instructor": "Ciborowski T"
     },
     {
@@ -19067,8 +19067,8 @@
       ],
       "start_time": 1530,
       "end_time": 1645,
-      "building": "ECS",
-      "room": "416",
+      "building": "VEC",
+      "room": "519",
       "instructor": "Shahnawaz I"
     },
     {
@@ -19280,8 +19280,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "FCS",
-      "room": "008",
+      "building": "ECS",
+      "room": "405",
       "instructor": "Allahgholizadeh Haghi B"
     },
     {
@@ -21123,7 +21123,7 @@
       "start_time": 1230,
       "end_time": 1345,
       "building": "ET",
-      "room": "009",
+      "room": "105",
       "instructor": "Lopez K"
     },
     {
@@ -30528,8 +30528,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "ET",
-      "room": "009",
+      "building": "COB",
+      "room": "216",
       "instructor": "Kolber S"
     },
     {
@@ -31529,8 +31529,8 @@
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "LA5",
-      "room": "148",
+      "building": "SPA",
+      "room": "112",
       "instructor": "Davidson M"
     },
     {
@@ -31829,8 +31829,8 @@
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "LA5",
-      "room": "148",
+      "building": "SPA",
+      "room": "112",
       "instructor": "Davidson M"
     },
     {
@@ -40561,8 +40561,8 @@
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "LA5",
-      "room": "148",
+      "building": "SPA",
+      "room": "112",
       "instructor": "Davidson M"
     },
     {
@@ -41115,8 +41115,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "COB",
-      "room": "237B",
+      "building": "HHS1",
+      "room": "100",
       "instructor": "Kim J"
     },
     {
@@ -45466,7 +45466,7 @@
       "end_time": 1420,
       "building": "EN2",
       "room": "200",
-      "instructor": "Staff"
+      "instructor": "Kutzmann A"
     },
     {
       "course_title": "MAE 478 - AEROSPACE SYSTEM DESIGN I",
@@ -45477,7 +45477,7 @@
       "end_time": 1715,
       "building": "EN2",
       "room": "200",
-      "instructor": "Staff"
+      "instructor": "Droney C"
     },
     {
       "course_title": "MAE 478 - AEROSPACE SYSTEM DESIGN I",
@@ -59297,7 +59297,7 @@
       "start_time": 1230,
       "end_time": 1345,
       "building": "TA",
-      "room": "037",
+      "room": "038",
       "instructor": "Stanford V"
     },
     {
@@ -59321,7 +59321,7 @@
       "start_time": 1400,
       "end_time": 1515,
       "building": "TA",
-      "room": "037",
+      "room": "038",
       "instructor": "Montenegro C"
     },
     {
@@ -59545,7 +59545,7 @@
       "start_time": 1430,
       "end_time": 1715,
       "building": "TA",
-      "room": "038",
+      "room": "037",
       "instructor": "Richardson J"
     },
     {
@@ -59702,7 +59702,7 @@
       "start_time": 1530,
       "end_time": 1645,
       "building": "TA",
-      "room": "037",
+      "room": "038",
       "instructor": "Greer J"
     },
     {
@@ -59850,7 +59850,7 @@
       "start_time": 1230,
       "end_time": 1415,
       "building": "TA",
-      "room": "038",
+      "room": "037",
       "instructor": "Greer J"
     },
     {
@@ -59861,7 +59861,7 @@
       "start_time": 1230,
       "end_time": 1415,
       "building": "TA",
-      "room": "038",
+      "room": "037",
       "instructor": "Greer J"
     },
     {
