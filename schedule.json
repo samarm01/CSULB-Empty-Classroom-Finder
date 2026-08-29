@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-28 20:09:19",
+  "last_updated": "2026-08-29 13:48:09",
   "buildings": [
     "AS",
     "CINE",
@@ -895,8 +895,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "COB",
-      "room": "216",
+      "building": "PSY",
+      "room": "201",
       "instructor": "Kirby J"
     },
     {
@@ -991,8 +991,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "PSY",
-      "room": "201",
+      "building": "FCS",
+      "room": "008",
       "instructor": "Claybrook M"
     },
     {
@@ -13218,8 +13218,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "HSD",
-      "room": "111",
+      "building": "HHS1",
+      "room": "201",
       "instructor": "Ortega Y"
     },
     {
@@ -14138,7 +14138,7 @@
       "start_time": 1200,
       "end_time": 1445,
       "building": "CINE",
-      "room": "123",
+      "room": "101",
       "instructor": "Cheng J"
     },
     {
@@ -14160,7 +14160,7 @@
       "start_time": 900,
       "end_time": 1145,
       "building": "CINE",
-      "room": "123",
+      "room": "101",
       "instructor": "Cheng J"
     },
     {
@@ -36676,7 +36676,7 @@
       "start_time": 1600,
       "end_time": 1845,
       "building": "COB",
-      "room": "214",
+      "room": "237A",
       "instructor": "Rinderle S"
     },
     {
@@ -40086,8 +40086,8 @@
       ],
       "start_time": 1600,
       "end_time": 1845,
-      "building": "KIN",
-      "room": "021",
+      "building": "HHS1",
+      "room": "201",
       "instructor": "Schick E"
     },
     {
@@ -42855,8 +42855,8 @@
       ],
       "start_time": 1530,
       "end_time": 1645,
-      "building": "LA5",
-      "room": "265",
+      "building": "PSY",
+      "room": "236",
       "instructor": "Gray C"
     },
     {
@@ -42879,8 +42879,8 @@
       ],
       "start_time": 1700,
       "end_time": 1815,
-      "building": "LA5",
-      "room": "265",
+      "building": "PSY",
+      "room": "236",
       "instructor": "Gray C"
     },
     {
@@ -57737,8 +57737,8 @@
       ],
       "start_time": 1300,
       "end_time": 1545,
-      "building": "LA1",
-      "room": "210",
+      "building": "NUR",
+      "room": "066",
       "instructor": "Alani S"
     },
     {
@@ -57792,8 +57792,8 @@
       ],
       "start_time": 930,
       "end_time": 1215,
-      "building": "LA1",
-      "room": "210",
+      "building": "KIN",
+      "room": "051A",
       "instructor": "Yaghmai N"
     },
     {
