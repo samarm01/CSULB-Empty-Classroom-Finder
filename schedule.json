@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-31 16:05:17",
+  "last_updated": "2026-09-01 13:25:19",
   "buildings": [
     "AS",
     "CINE",
@@ -871,8 +871,8 @@
       ],
       "start_time": 930,
       "end_time": 1045,
-      "building": "CPCE",
-      "room": "207",
+      "building": "CINE",
+      "room": "203",
       "instructor": "Wesson L"
     },
     {
@@ -32420,8 +32420,8 @@
       ],
       "start_time": 1100,
       "end_time": 1150,
-      "building": "CPCE",
-      "room": "207",
+      "building": "CINE",
+      "room": "101",
       "instructor": "Angel A"
     },
     {
