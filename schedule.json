@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-01 13:25:19",
+  "last_updated": "2026-09-02 12:42:42",
   "buildings": [
     "AS",
     "CINE",
@@ -823,8 +823,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "LA2",
-      "room": "120",
+      "building": "KIN",
+      "room": "059",
       "instructor": "Wesson L"
     },
     {
@@ -871,8 +871,8 @@
       ],
       "start_time": 930,
       "end_time": 1045,
-      "building": "CINE",
-      "room": "203",
+      "building": "CPCE",
+      "room": "207",
       "instructor": "Wesson L"
     },
     {
@@ -20697,8 +20697,8 @@
       ],
       "start_time": 900,
       "end_time": 1700,
-      "building": "AS",
-      "room": "241",
+      "building": "EED",
+      "room": "040",
       "instructor": "Amaya S"
     },
     {
@@ -20709,8 +20709,8 @@
       ],
       "start_time": 900,
       "end_time": 1700,
-      "building": "AS",
-      "room": "241",
+      "building": "EED",
+      "room": "040",
       "instructor": "Amaya S"
     },
     {
@@ -20721,8 +20721,8 @@
       ],
       "start_time": 900,
       "end_time": 1700,
-      "building": "AS",
-      "room": "241",
+      "building": "EED",
+      "room": "040",
       "instructor": "Amaya S"
     },
     {
@@ -26360,7 +26360,7 @@
       "start_time": 1230,
       "end_time": 1515,
       "building": "LA1",
-      "room": "204",
+      "room": "210",
       "instructor": "Ordonez A"
     },
     {
@@ -26821,8 +26821,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "AS",
-      "room": "233",
+      "building": "LA2",
+      "room": "200",
       "instructor": "Brown S"
     },
     {
@@ -32420,8 +32420,8 @@
       ],
       "start_time": 1100,
       "end_time": 1150,
-      "building": "CINE",
-      "room": "101",
+      "building": "CPCE",
+      "room": "207",
       "instructor": "Angel A"
     },
     {
