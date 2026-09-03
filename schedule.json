@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-02 12:42:42",
+  "last_updated": "2026-09-03 12:46:31",
   "buildings": [
     "AS",
     "CINE",
@@ -12404,7 +12404,7 @@
       "start_time": 1700,
       "end_time": 1945,
       "building": "PSY",
-      "room": "152",
+      "room": "201",
       "instructor": "Tian F"
     },
     {
@@ -15677,7 +15677,7 @@
       "start_time": 1400,
       "end_time": 1515,
       "building": "HC",
-      "room": "133",
+      "room": "132",
       "instructor": "McCroskey L"
     },
     {
@@ -15761,7 +15761,7 @@
       "start_time": 1400,
       "end_time": 1515,
       "building": "HC",
-      "room": "132",
+      "room": "133",
       "instructor": "Jones C"
     },
     {
@@ -18444,7 +18444,7 @@
       "start_time": 1230,
       "end_time": 1345,
       "building": "ECS",
-      "room": "405",
+      "room": "413",
       "instructor": "Golshani F"
     },
     {
@@ -19056,7 +19056,7 @@
       "start_time": 1230,
       "end_time": 1345,
       "building": "ECS",
-      "room": "413",
+      "room": "405",
       "instructor": "Albinali F"
     },
     {
@@ -21512,8 +21512,8 @@
       ],
       "start_time": 1600,
       "end_time": 1845,
-      "building": "ET",
-      "room": "103",
+      "building": "HSD",
+      "room": "119",
       "instructor": "Schug R"
     },
     {
@@ -21535,8 +21535,8 @@
       ],
       "start_time": 1600,
       "end_time": 1845,
-      "building": "HSD",
-      "room": "119",
+      "building": "ET",
+      "room": "103",
       "instructor": "Diaz M"
     },
     {
@@ -29500,7 +29500,7 @@
       "end_time": 1250,
       "building": "EN2",
       "room": "107",
-      "instructor": "Buharie F"
+      "instructor": "Akhtar S"
     },
     {
       "course_title": "ENGR 101 - INTRO ENGINEERING PROFESSION",
@@ -49152,8 +49152,8 @@
       ],
       "start_time": 900,
       "end_time": 1145,
-      "building": "SPA",
-      "room": "108",
+      "building": "KIN",
+      "room": "063",
       "instructor": "Jadalla A"
     },
     {
@@ -59046,7 +59046,7 @@
       "start_time": 800,
       "end_time": 915,
       "building": "TA",
-      "room": "131",
+      "room": "241",
       "instructor": "Trudgeon T"
     },
     {
@@ -59393,7 +59393,7 @@
       "start_time": 800,
       "end_time": 915,
       "building": "TA",
-      "room": "241",
+      "room": "131",
       "instructor": "Hutchman R"
     },
     {
