@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-03 12:46:31",
+  "last_updated": "2026-09-04 12:39:25",
   "buildings": [
     "AS",
     "CINE",
@@ -15700,8 +15700,8 @@
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "LAB",
-      "room": "224",
+      "building": "LA5",
+      "room": "148",
       "instructor": "Wiley D"
     },
     {
@@ -17272,7 +17272,7 @@
       "start_time": 1400,
       "end_time": 1450,
       "building": "ECS",
-      "room": "405",
+      "room": "413",
       "instructor": "Golshani F"
     },
     {
@@ -17284,7 +17284,7 @@
       "start_time": 1500,
       "end_time": 1615,
       "building": "ECS",
-      "room": "405",
+      "room": "413",
       "instructor": "Golshani F"
     },
     {
@@ -17829,7 +17829,7 @@
       "start_time": 1530,
       "end_time": 1645,
       "building": "ECS",
-      "room": "413",
+      "room": "405",
       "instructor": "Brown D"
     },
     {
@@ -19140,7 +19140,7 @@
       "start_time": 1400,
       "end_time": 1515,
       "building": "ECS",
-      "room": "413",
+      "room": "405",
       "instructor": "Albinali F"
     },
     {
@@ -19372,7 +19372,7 @@
       "start_time": 1730,
       "end_time": 1845,
       "building": "ECS",
-      "room": "405",
+      "room": "413",
       "instructor": "Golshani F"
     },
     {
@@ -28979,8 +28979,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "ED2",
-      "room": "216",
+      "building": "AS",
+      "room": "243",
       "instructor": "Villa M"
     },
     {
@@ -28990,8 +28990,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "ED2",
-      "room": "216",
+      "building": "AS",
+      "room": "243",
       "instructor": "Villa M"
     },
     {
@@ -29001,8 +29001,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "ED2",
-      "room": "216",
+      "building": "AS",
+      "room": "243",
       "instructor": "Villa M"
     },
     {
@@ -29012,8 +29012,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "ED2",
-      "room": "216",
+      "building": "AS",
+      "room": "243",
       "instructor": "Villa M"
     },
     {
@@ -29023,8 +29023,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "ED2",
-      "room": "216",
+      "building": "AS",
+      "room": "243",
       "instructor": "Villa M"
     },
     {
@@ -29034,8 +29034,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "ED2",
-      "room": "216",
+      "building": "AS",
+      "room": "243",
       "instructor": "Villa M"
     },
     {
@@ -29045,8 +29045,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "ED2",
-      "room": "216",
+      "building": "AS",
+      "room": "243",
       "instructor": "Villa M"
     },
     {
@@ -29056,8 +29056,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "ED2",
-      "room": "216",
+      "building": "AS",
+      "room": "243",
       "instructor": "Villa M"
     },
     {
@@ -30420,8 +30420,8 @@
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "ED2",
-      "room": "216",
+      "building": "HHS1",
+      "room": "101",
       "instructor": "Ruiz R"
     },
     {
@@ -38834,6 +38834,17 @@
       "instructor": "Ingram J"
     },
     {
+      "course_title": "KIN 243 - TECHNIQUES LIFETIME SPORTS ACT",
+      "days": [
+        "Tu"
+      ],
+      "start_time": 1100,
+      "end_time": 1150,
+      "building": "RNG",
+      "room": "103",
+      "instructor": "Ingram J"
+    },
+    {
       "course_title": "KIN 244 - TECHNIQUE OF BODY MVMT & CNTRL",
       "days": [
         "M"
@@ -43592,8 +43603,8 @@
       ],
       "start_time": 1600,
       "end_time": 1715,
-      "building": "LA5",
-      "room": "261",
+      "building": "PSY",
+      "room": "203",
       "instructor": "Brevik J"
     },
     {
@@ -57411,8 +57422,8 @@
       ],
       "start_time": 1700,
       "end_time": 1945,
-      "building": "LA3",
-      "room": "120",
+      "building": "LA2",
+      "room": "106",
       "instructor": "Herrera Cepero D"
     },
     {
