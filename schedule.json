@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-05 11:47:33",
+  "last_updated": "2026-09-06 12:05:04",
   "buildings": [
     "AS",
     "CINE",
@@ -19222,7 +19222,7 @@
       "end_time": 1345,
       "building": "ECS",
       "room": "306",
-      "instructor": "Staff"
+      "instructor": "Nikbakht Aali S"
     },
     {
       "course_title": "CECS 532 - MEMORY DESIGN IMPLEMENTATION",
@@ -19349,7 +19349,7 @@
       "end_time": 1045,
       "building": "ECS",
       "room": "412",
-      "instructor": "Staff"
+      "instructor": "Nikbakht Aali S"
     },
     {
       "course_title": "CECS 575 - OBJ ORIENTED ANALYSIS & DESIGN",
@@ -32344,7 +32344,7 @@
       "end_time": 1150,
       "building": "CPCE",
       "room": "208",
-      "instructor": "Staff"
+      "instructor": "Reyes A"
     },
     {
       "course_title": "ES 100A - BEACH XP ACTIVITY I",
@@ -34606,7 +34606,7 @@
       "start_time": 1900,
       "end_time": 2145,
       "building": "FCS",
-      "room": "126",
+      "room": "123",
       "instructor": "Hill M"
     },
     {
@@ -36654,7 +36654,7 @@
       "start_time": 1900,
       "end_time": 2145,
       "building": "COB",
-      "room": "214",
+      "room": "227",
       "instructor": "Boatman H"
     },
     {
@@ -41171,7 +41171,7 @@
       "start_time": 1900,
       "end_time": 2145,
       "building": "COB",
-      "room": "227",
+      "room": "214",
       "instructor": "Rowe J"
     },
     {
@@ -42561,8 +42561,8 @@
       ],
       "start_time": 1530,
       "end_time": 1620,
-      "building": "PH1",
-      "room": "223",
+      "building": "LA1",
+      "room": "314",
       "instructor": "Dam L"
     },
     {
@@ -60496,8 +60496,8 @@
       ],
       "start_time": 1230,
       "end_time": 1345,
-      "building": "SPA",
-      "room": "108",
+      "building": "LA3",
+      "room": "109",
       "instructor": "High J"
     },
     {
