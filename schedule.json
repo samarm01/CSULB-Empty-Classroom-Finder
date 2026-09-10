@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-09 12:54:40",
+  "last_updated": "2026-09-10 12:52:14",
   "buildings": [
     "AS",
     "CINE",
@@ -356,8 +356,8 @@
       ],
       "start_time": 1800,
       "end_time": 2145,
-      "building": "COB",
-      "room": "218",
+      "building": "LA5",
+      "room": "355",
       "instructor": "Johnson D"
     },
     {
@@ -24829,18 +24829,6 @@
       "instructor": "Mays A"
     },
     {
-      "course_title": "ECON 437 - URBAN ECONOMICS",
-      "days": [
-        "M",
-        "W"
-      ],
-      "start_time": 930,
-      "end_time": 1045,
-      "building": "SPA",
-      "room": "107",
-      "instructor": "Flores A"
-    },
-    {
       "course_title": "ECON 462 - ENVIRONMENTAL ECONOMICS",
       "days": [
         "Tu",
@@ -30312,8 +30300,8 @@
       ],
       "start_time": 1600,
       "end_time": 1845,
-      "building": "ED2",
-      "room": "216",
+      "building": "LA2",
+      "room": "101B",
       "instructor": "Ripley J"
     },
     {
@@ -42971,8 +42959,8 @@
       ],
       "start_time": 800,
       "end_time": 950,
-      "building": "PSY",
-      "room": "320",
+      "building": "LA5",
+      "room": "347",
       "instructor": "Padilla F"
     },
     {
@@ -44730,7 +44718,7 @@
       "end_time": 1515,
       "building": "VEC",
       "room": "110",
-      "instructor": "Saeidi M"
+      "instructor": "Shariat P"
     },
     {
       "course_title": "MAE 373 - MECHANICS OF DEFORMABLE BODIES",
@@ -44778,7 +44766,7 @@
       "end_time": 1845,
       "building": "VEC",
       "room": "112",
-      "instructor": "Saeidi M"
+      "instructor": "Tajvidi M"
     },
     {
       "course_title": "MAE 373 - MECHANICS OF DEFORMABLE BODIES",
