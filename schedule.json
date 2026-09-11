@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-10 12:52:14",
+  "last_updated": "2026-09-11 12:47:06",
   "buildings": [
     "AS",
     "CINE",
@@ -26787,8 +26787,8 @@
       ],
       "start_time": 1600,
       "end_time": 1845,
-      "building": "LA5",
-      "room": "359",
+      "building": "LA1",
+      "room": "200",
       "instructor": "Bracho C"
     },
     {
@@ -27680,8 +27680,8 @@
       ],
       "start_time": 1600,
       "end_time": 1845,
-      "building": "HC",
-      "room": "106",
+      "building": "LA5",
+      "room": "250",
       "instructor": "Crawford N"
     },
     {
@@ -29981,8 +29981,8 @@
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "HHS1",
-      "room": "100",
+      "building": "LAB",
+      "room": "306",
       "instructor": "Eyre K"
     },
     {
@@ -33769,7 +33769,7 @@
       "start_time": 800,
       "end_time": 915,
       "building": "LA1",
-      "room": "304",
+      "room": "300",
       "instructor": "Argandona M"
     },
     {
@@ -42458,8 +42458,8 @@
       ],
       "start_time": 1600,
       "end_time": 1715,
-      "building": "PH1",
-      "room": "220",
+      "building": "LA5",
+      "room": "261",
       "instructor": "English C"
     },
     {
@@ -50715,7 +50715,7 @@
       "end_time": 1045,
       "building": "NUR",
       "room": "064",
-      "instructor": "Carandang J"
+      "instructor": "Enfiedjian J"
     },
     {
       "course_title": "NRSG 761 - AG ACUTE CARE ADV PRAC NRSG II",
@@ -50792,7 +50792,7 @@
       "end_time": 1250,
       "building": "NUR",
       "room": "064",
-      "instructor": "Carandang J"
+      "instructor": "Enfiedjian J"
     },
     {
       "course_title": "NRSG 761L - AG ACUTE CARE ADV CLIN STU II",
