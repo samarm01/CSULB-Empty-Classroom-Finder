@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-12 12:06:58",
+  "last_updated": "2026-09-13 13:16:23",
   "buildings": [
     "AS",
     "CINE",
@@ -24424,7 +24424,7 @@
       "end_time": 1215,
       "building": "SPA",
       "room": "105",
-      "instructor": "Flores A"
+      "instructor": "Saraf N"
     },
     {
       "course_title": "ECON 300 - FUNDAMENTALS OF ECONOMICS",
@@ -24651,7 +24651,7 @@
       "end_time": 1515,
       "building": "SPA",
       "room": "204",
-      "instructor": "Flores A"
+      "instructor": "Saraf N"
     },
     {
       "course_title": "ECON 355 - LAW AND ECONOMICS",
@@ -24722,7 +24722,7 @@
       "end_time": 1045,
       "building": "SPA",
       "room": "106",
-      "instructor": "Flores A"
+      "instructor": "Luong S"
     },
     {
       "course_title": "ECON 380 - ECONOMIC STATISTICS",
@@ -24827,6 +24827,18 @@
       "building": "SPA",
       "room": "106",
       "instructor": "Mays A"
+    },
+    {
+      "course_title": "ECON 437 - URBAN ECONOMICS",
+      "days": [
+        "M",
+        "W"
+      ],
+      "start_time": 930,
+      "end_time": 1045,
+      "building": "SPA",
+      "room": "107",
+      "instructor": "Hernandez A"
     },
     {
       "course_title": "ECON 462 - ENVIRONMENTAL ECONOMICS",
