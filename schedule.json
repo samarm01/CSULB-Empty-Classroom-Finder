@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14 14:57:17",
+  "last_updated": "2026-09-15 13:23:53",
   "buildings": [
     "AS",
     "CINE",
@@ -53361,7 +53361,7 @@
       "end_time": 1320,
       "building": "HSCI",
       "room": "231",
-      "instructor": "Gu J"
+      "instructor": "Zinn J"
     },
     {
       "course_title": "PHYS 494 - SEMINAR IN PHYSICS",
@@ -53554,7 +53554,7 @@
       "end_time": 1320,
       "building": "HSCI",
       "room": "231",
-      "instructor": "Gu J"
+      "instructor": "Zinn J"
     },
     {
       "course_title": "PHYS 594 - SEMINAR IN PHYSICS",
