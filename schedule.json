@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-16 13:22:57",
+  "last_updated": "2026-09-17 13:19:25",
   "buildings": [
     "AS",
     "CINE",
@@ -27714,8 +27714,8 @@
       ],
       "start_time": 1900,
       "end_time": 2145,
-      "building": "HC",
-      "room": "131",
+      "building": "LA5",
+      "room": "250",
       "instructor": "Crawford N"
     },
     {
@@ -39326,24 +39326,14 @@
     {
       "course_title": "KIN 332 - SOCIOCULTURAL DIMENSIONS SPORT",
       "days": [
-        "M"
-      ],
-      "start_time": 1400,
-      "end_time": 1515,
-      "building": "KIN",
-      "room": "021",
-      "instructor": "Heynen A"
-    },
-    {
-      "course_title": "KIN 332 - SOCIOCULTURAL DIMENSIONS SPORT",
-      "days": [
+        "M",
         "W"
       ],
       "start_time": 1400,
       "end_time": 1515,
-      "building": "KIN",
-      "room": "057",
-      "instructor": "Staff"
+      "building": "HHS1",
+      "room": "100",
+      "instructor": "Heynen A"
     },
     {
       "course_title": "KIN 332 - SOCIOCULTURAL DIMENSIONS SPORT",
@@ -57662,7 +57652,7 @@
       "end_time": 1645,
       "building": "HHS1",
       "room": "104",
-      "instructor": "Cardoza N"
+      "instructor": "Ventress N"
     },
     {
       "course_title": "SLP 462 - SLPA PRACTICUM",
