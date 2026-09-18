@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-17 13:19:25",
+  "last_updated": "2026-09-18 12:53:27",
   "buildings": [
     "AS",
     "CINE",
@@ -4997,8 +4997,8 @@
       ],
       "start_time": 900,
       "end_time": 1145,
-      "building": "SSC",
-      "room": "070",
+      "building": "FA3",
+      "room": "103",
       "instructor": "Seirafi M"
     },
     {
@@ -30456,8 +30456,8 @@
       ],
       "start_time": 1100,
       "end_time": 1215,
-      "building": "LAB",
-      "room": "306",
+      "building": "COB",
+      "room": "216",
       "instructor": "Stavast J"
     },
     {
