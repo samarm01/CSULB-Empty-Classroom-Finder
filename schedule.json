@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-18 12:53:27",
+  "last_updated": "2026-09-19 12:26:03",
   "buildings": [
     "AS",
     "CINE",
@@ -58220,7 +58220,7 @@
       "start_time": 1730,
       "end_time": 1845,
       "building": "LA5",
-      "room": "259",
+      "room": "245",
       "instructor": "Le A"
     },
     {
@@ -58301,7 +58301,7 @@
       "end_time": 1815,
       "building": "AS",
       "room": "240",
-      "instructor": "Olson A"
+      "instructor": "Patton Davis L"
     },
     {
       "course_title": "SDHE 513 - CRIT PERSP STDT DEV THRY PRAC",
@@ -58312,7 +58312,7 @@
       "end_time": 1815,
       "building": "AS",
       "room": "240",
-      "instructor": "Olson A"
+      "instructor": "Patton Davis L"
     },
     {
       "course_title": "SDHE 514 - LEADING EQTY CHNG IN HIGHER ED",
