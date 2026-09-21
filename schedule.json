@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-20 13:00:21",
+  "last_updated": "2026-09-21 15:02:25",
   "buildings": [
     "AS",
     "CINE",
@@ -51627,7 +51627,7 @@
       "end_time": 1345,
       "building": "DESN",
       "room": "112",
-      "instructor": "Ming G"
+      "instructor": "Ming R"
     },
     {
       "course_title": "PHIL 101 - THE MEANING OF LIFE",
@@ -51908,7 +51908,7 @@
       "end_time": 1045,
       "building": "LA5",
       "room": "246",
-      "instructor": "Ming G"
+      "instructor": "Ming R"
     },
     {
       "course_title": "PHIL 400 - BUSINESS ETHICS",
@@ -51968,7 +51968,7 @@
       "end_time": 1215,
       "building": "LA2",
       "room": "206",
-      "instructor": "Ming G"
+      "instructor": "Ming R"
     },
     {
       "course_title": "PHIL 403 - MEDICAL ETHICS",
