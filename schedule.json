@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-21 15:02:25",
+  "last_updated": "2026-09-22 13:20:05",
   "buildings": [
     "AS",
     "CINE",
@@ -8311,7 +8311,7 @@
       "end_time": 1345,
       "building": "HSCI",
       "room": "073",
-      "instructor": "Frank J"
+      "instructor": "Frank B"
     },
     {
       "course_title": "BIOL 260 - BIOSTATISTICS",
@@ -28808,17 +28808,6 @@
       "instructor": "Staff"
     },
     {
-      "course_title": "EDSS 490 - S TOPICS ACADEMIC SUBJECTS",
-      "days": [
-        "Th"
-      ],
-      "start_time": 1700,
-      "end_time": 1945,
-      "building": "LA1",
-      "room": "307",
-      "instructor": "Staff"
-    },
-    {
       "course_title": "EDSP 410 - INCLUSIVE&EQUITABLE PRACTICES",
       "days": [
         "W"
@@ -47091,8 +47080,8 @@
       "start_time": 800,
       "end_time": 850,
       "building": "UMC",
-      "room": "A301",
-      "instructor": "Sosa J"
+      "room": "A311",
+      "instructor": "Friedrich A"
     },
     {
       "course_title": "MUS 325B - COND FOR MUS ED - INSTRUMENTAL",
@@ -47102,8 +47091,8 @@
       "start_time": 900,
       "end_time": 1050,
       "building": "UMC",
-      "room": "A301",
-      "instructor": "Sosa J"
+      "room": "A311",
+      "instructor": "Friedrich A"
     },
     {
       "course_title": "MUS 330 - OPERA",
@@ -53351,7 +53340,7 @@
       "end_time": 1320,
       "building": "HSCI",
       "room": "231",
-      "instructor": "Zinn J"
+      "instructor": "Gu J"
     },
     {
       "course_title": "PHYS 494 - SEMINAR IN PHYSICS",
@@ -53544,7 +53533,7 @@
       "end_time": 1320,
       "building": "HSCI",
       "room": "231",
-      "instructor": "Zinn J"
+      "instructor": "Gu J"
     },
     {
       "course_title": "PHYS 594 - SEMINAR IN PHYSICS",
@@ -60320,17 +60309,6 @@
       "instructor": "Donato C"
     },
     {
-      "course_title": "UNIV 101 - FRSHMN SEM UNDECLARED STUDENTS",
-      "days": [
-        "W"
-      ],
-      "start_time": 1900,
-      "end_time": 2000,
-      "building": "HC",
-      "room": "120",
-      "instructor": "Spivey T"
-    },
-    {
       "course_title": "UNIV 296 - UNDERGRADUATE RESEARCH SEMINAR",
       "days": [
         "M"
@@ -60373,28 +60351,6 @@
       "building": "PSY",
       "room": "200",
       "instructor": "Barriere H"
-    },
-    {
-      "course_title": "UNIV 395 - SCHOLARS 1 BUILD LCS",
-      "days": [
-        "F"
-      ],
-      "start_time": 1700,
-      "end_time": 1750,
-      "building": "LA2",
-      "room": "101B",
-      "instructor": "Nguyen-Rodriguez S"
-    },
-    {
-      "course_title": "UNIV 395 - SCHOLARS 1 BUILD LCS",
-      "days": [
-        "F"
-      ],
-      "start_time": 1200,
-      "end_time": 1250,
-      "building": "LA2",
-      "room": "101B",
-      "instructor": "Nguyen-Rodriguez S"
     },
     {
       "course_title": "UNIV 495 - BUILD LEARNING COMMUNITY",
